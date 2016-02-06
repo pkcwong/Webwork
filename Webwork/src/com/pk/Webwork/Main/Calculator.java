@@ -19,6 +19,10 @@ public class Calculator {
 		Parser.addStandardConstants();
 	}
 	
+	public void addVariable() {
+		
+	}
+	
 	/**
 	 * EVALUATES THE EXPRESSION
 	 * <p>
