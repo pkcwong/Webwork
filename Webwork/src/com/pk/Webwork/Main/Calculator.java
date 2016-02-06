@@ -5,10 +5,6 @@ public class Calculator {
 	org.nfunk.jep.JEP Parser;
 	private String expression;
 
-	public Calculator() {
-
-	}
-
 	/**
 	 * CLEARS ALL DATA
 	 * <p>
@@ -20,7 +16,19 @@ public class Calculator {
 	}
 
 	/**
+	 * INPUT EXPRESSION
+	 * <p>
+	 * 
+	 * @param expression
+	 *            arithmetic expression
+	 */
+	public void input(String expression) {
+		this.expression = expression;
+	}
+
+	/**
 	 * ADDS A USER-DEFINED CONSTANT
+	 * <p>
 	 * 
 	 * @param var
 	 *            variable name
