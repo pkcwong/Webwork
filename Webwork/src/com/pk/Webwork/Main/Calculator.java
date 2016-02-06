@@ -18,11 +18,19 @@ public class Calculator {
 		Parser.addStandardFunctions();
 		Parser.addStandardConstants();
 	}
-	
-	public void addVariable() {
-		
+
+	/**
+	 * ADDS A USER-DEFINED CONSTANT
+	 * 
+	 * @param var
+	 *            variable name
+	 * @param value
+	 *            constant
+	 */
+	public void addVariable(String var, float value) {
+
 	}
-	
+
 	/**
 	 * EVALUATES THE EXPRESSION
 	 * <p>
@@ -31,7 +39,7 @@ public class Calculator {
 	 */
 	public float evaluate() {
 		Parser.parseExpression(this.expression);
-		return (float)(Parser.getValue());
+		return (float) (Parser.getValue());
 	}
 
 }
