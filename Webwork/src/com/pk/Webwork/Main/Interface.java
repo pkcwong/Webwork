@@ -1,11 +1,83 @@
 package com.pk.Webwork.Main;
 
+import java.awt.GridLayout;
+import java.awt.Insets;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.WindowConstants;
 
-public class Interface extends JFrame{
-	
+public class Interface extends JFrame {
+
+	private JScrollPane scrPane;
+	private JPanel Panel = new JPanel();
+	private JLabel Head_t = new JLabel("Output:");
+	private JLabel Body_t = new JLabel("Console:");
+	private JTextArea Head = new JTextArea("Output goes here");
+	private JTextArea Body = new JTextArea("Console goes here");
+
 	public Interface() {
-		
+		super("Console");
+		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		GridLayout layout = new GridLayout(4, 1);
+		this.getContentPane().setLayout(layout);
+		this.setContentPane(Panel);
+		this.setResizable(false);
+		this.clean();
+		this.setVisible(true);
 	}
-	
+
+	/**
+	 * WRITES TO HEAD
+	 * <p>
+	 * 
+	 * @param text
+	 *            string
+	 */
+	public void writeHead(String text) {
+		this.Head.append(text);
+	}
+
+	/**
+	 * WRITES TO BODY
+	 * <p>
+	 * 
+	 * @param text
+	 *            string
+	 */
+	public void writeBody(String text) {
+		this.Body.append(text);
+	}
+
+	/**
+	 * UPDATES INTERFACE
+	 * <p>
+	 */
+	public void update() {
+		this.clean();
+		this.repaint();
+	}
+
+	/**
+	 * CLEANUP
+	 * <p>
+	 */
+	public void clean() {
+		this.Panel.removeAll();
+		this.Panel.add(this.Head_t);
+		JScrollPane scr_h = new JScrollPane(this.Head);
+		this.Panel.add(scr_h);
+		this.Panel.add(this.Body_t);
+		JScrollPane scr_b = new JScrollPane(this.Body);
+		this.Panel.add(scr_b);
+		this.Panel.validate();
+		this.setContentPane(Panel);
+		this.validate();
+		Insets insets = this.getInsets();
+		this.setSize(300 + insets.left + insets.right, 200 + insets.top + insets.bottom);
+		this.setLocationRelativeTo(null);
+	}
+
 }

@@ -6,9 +6,11 @@ import java.util.Scanner;
 public class Main {
 
 	private static Scanner load;
-
+	private static Calculator cal=new Calculator();
+	
 	public static void main(String[] args) {
-		new Interface();
+		Interface Frame=new Interface();
+		Frame.writeBody("hihi");
 	}
 
 	public static void load(File key) {
@@ -18,5 +20,5 @@ public class Main {
 			err.printStackTrace();
 		}
 	}
-
+	
 }

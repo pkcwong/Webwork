@@ -5,21 +5,22 @@ import java.util.ArrayList;
 public class Calculator {
 
 	private org.nfunk.jep.JEP Parser;
-	private ArrayList<String> var = new ArrayList<String>();
+	private ArrayList<String> var;
 	private String expression;
 
 	public Calculator() {
-		this.clear();
+		this.init();
 	}
 
 	/**
 	 * CLEARS ALL DATA
 	 * <p>
 	 */
-	public void clear() {
-		Parser = new org.nfunk.jep.JEP();
-		Parser.addStandardFunctions();
-		Parser.addStandardConstants();
+	public void init() {
+		this.Parser = new org.nfunk.jep.JEP();
+		this.Parser.addStandardFunctions();
+		this.Parser.addStandardConstants();
+		var = new ArrayList<String>();
 	}
 
 	/**
@@ -43,29 +44,44 @@ public class Calculator {
 	 *            constant
 	 */
 	public void addVariable(String var, float value) {
-		Parser.addVariable(var, value);
+		this.Parser.addVariable(var, value);
 		this.var.add(var);
 	}
 
+	/**
+	 * RESETS VARIABLE LIST
+	 * <p>
+	 */
 	public void clearVariable() {
 		while (var.size() != 0) {
-			Parser.removeVariable(var.get(0));
+			this.Parser.removeVariable(var.get(0));
 			var.remove(0);
 		}
+	}
+
+	/**
+	 * VALIDATES EXPRESSION
+	 * <p>
+	 * 
+	 * @return true on success
+	 */
+	public boolean validate() {
+		this.Parser.parseExpression(this.expression);
+		if (this.Parser.getErrorInfo() != null) {
+			return false;
+		}
+		return true;
 	}
 
 	/**
 	 * EVALUATES THE EXPRESSION
 	 * <p>
 	 * 
-	 * @return value of the expression on success, error on failure
+	 * @return value of the expression
 	 */
-	public String evaluate() {
-		Parser.parseExpression(this.expression);
-		if (Parser.getErrorInfo() != null) {
-			return Parser.getErrorInfo();
-		}
-		return Double.toString(Parser.getValue());
+	public double evaluate() {
+		this.Parser.parseExpression(this.expression);
+		return Parser.getValue();
 	}
 
 }
