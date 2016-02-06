@@ -21,8 +21,8 @@ public class Interface extends JFrame {
 	public Interface() {
 		super("Console");
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		GridLayout layout = new GridLayout(4, 1);
-		this.getContentPane().setLayout(layout);
+		this.Head.setEditable(false);
+		this.Body.setEditable(false);
 		this.setContentPane(Panel);
 		this.setResizable(false);
 		this.clean();
@@ -37,7 +37,7 @@ public class Interface extends JFrame {
 	 *            string
 	 */
 	public void writeHead(String text) {
-		this.Head.append(text);
+		this.Head.setText(text + "\n" + this.Head.getText());
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class Interface extends JFrame {
 	 *            string
 	 */
 	public void writeBody(String text) {
-		this.Body.append(text);
+		this.Body.setText(text + "\n" + this.Body.getText());
 	}
 
 	/**
@@ -66,6 +66,8 @@ public class Interface extends JFrame {
 	 */
 	public void clean() {
 		this.Panel.removeAll();
+		GridLayout layout = new GridLayout(0, 1);
+		this.Panel.setLayout(layout);
 		this.Panel.add(this.Head_t);
 		JScrollPane scr_h = new JScrollPane(this.Head);
 		this.Panel.add(scr_h);
@@ -76,7 +78,7 @@ public class Interface extends JFrame {
 		this.setContentPane(Panel);
 		this.validate();
 		Insets insets = this.getInsets();
-		this.setSize(300 + insets.left + insets.right, 200 + insets.top + insets.bottom);
+		this.setSize(400 + insets.left + insets.right, 300 + insets.top + insets.bottom);
 		this.setLocationRelativeTo(null);
 	}
 

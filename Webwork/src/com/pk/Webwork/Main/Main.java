@@ -10,7 +10,6 @@ public class Main {
 	
 	public static void main(String[] args) {
 		Interface Frame=new Interface();
-		Frame.writeBody("hihi");
 	}
 
 	public static void load(File key) {
