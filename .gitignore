@@ -48,3 +48,8 @@ Temporary Items
 
 # User defined
 /.metadata
+*.xmi
+*.snap
+*.resources
+.metadata/.plugins/org.eclipse.jdt.core/1209590657.index
+*.index
