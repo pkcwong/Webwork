@@ -28,7 +28,7 @@ public class Calculator {
 	 *            constant
 	 */
 	public void addVariable(String var, float value) {
-
+		Parser.addVariable(var, value);
 	}
 
 	/**
