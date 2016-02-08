@@ -69,7 +69,6 @@ public class Main {
 					}
 				}
 			}
-
 		} catch (Exception err) {
 			Frame.writeBody("[ERROR] There is a problem loading file");
 			err.printStackTrace();
@@ -108,23 +107,25 @@ public class Main {
 	public static void input(String input) {
 		clear();
 		input.replace("\n", " ");
-		String[] parts = input.split("\\s+");
-		for (int i = 0; i != parts.length; i++) {
-			Frame.writeBody("Got input ' " + parts[i] + " '");
-			Calculator tempCal = new Calculator();
-			tempCal.clear();
-			for (int j = 0; j != value.size(); j++) {
-				if (var.size() > j) {
-					tempCal.addVariable(var.get(j), value.get(j));
+		if (input != null && !input.isEmpty()) {
+			String[] parts = input.split("\\s+");
+			for (int i = 0; i != parts.length; i++) {
+				Frame.writeBody("Got input ' " + parts[i] + " '");
+				Calculator tempCal = new Calculator();
+				tempCal.clear();
+				for (int j = 0; j != value.size(); j++) {
+					if (var.size() > j) {
+						tempCal.addVariable(var.get(j), value.get(j));
+					}
 				}
-			}
-			tempCal.input(parts[i]);
-			if (tempCal.validate()) {
-				double val = tempCal.evaluate();
-				value.add(val);
-				Frame.writeBody("Evaluated to " + val);
-			} else {
-				Frame.writeBody("[WARNING] Cannot parse input");
+				tempCal.input(parts[i]);
+				if (tempCal.validate()) {
+					double val = tempCal.evaluate();
+					value.add(val);
+					Frame.writeBody("Evaluated to " + val);
+				} else {
+					Frame.writeBody("[WARNING] Cannot parse input");
+				}
 			}
 		}
 	}
@@ -137,24 +138,27 @@ public class Main {
 		cal.clear();
 		cal.input(expression);
 		Frame.writeHead(">>> " + expression);
-		if (N != 0) {
-			for (int i = 0; i != value.size(); i++) {
-				if (var.size() > i) {
-					cal.addVariable(var.get(i), value.get(i));
-					Frame.writeBody("Compiled @param ' " + var.get(i) + " '");
-				} else {
-					Frame.writeBody("[WARNING] Extra args ' " + value.get(i) + " '");
-				}
-			}
-			if (cal.validate()) {
-				Frame.writeBody("Evaluated as " + cal.evaluate());
-				Frame.writeHead("\t" + cal.evaluate());
+		for (int i = 0; i != value.size(); i++) {
+			if (var.size() > i) {
+				cal.addVariable(var.get(i), value.get(i));
+				Frame.writeBody("Compiled @param ' " + var.get(i) + " '");
+			} else {
+				Frame.writeBody("[WARNING] Extra args[ ] ' " + value.get(i) + " '");
 			}
 		}
-		else {
-			Frame.writeBody("Evaluated as " + expression);
+		if (N != 0) {
+			if (cal.validate()) {
+				Frame.writeBody("Expression evaluated to " + cal.evaluate());
+				Frame.writeHead("\t" + cal.evaluate());
+			} else {
+				Frame.writeBody("[ERROR] See Parser log");
+				Frame.writeHead(cal.errLog());
+			}
+		} else {
+			Frame.writeBody("Expression evaluated to " + expression);
 			Frame.writeHead("\t" + expression);
 		}
+
 	}
 
 	/**

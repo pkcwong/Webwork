@@ -17,6 +17,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.WindowConstants;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class Interface extends JFrame {
 
@@ -33,7 +34,7 @@ public class Interface extends JFrame {
 	private JSpinner num = new JSpinner();
 
 	public Interface() {
-		super("Console");
+		super("Webwork");
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		this.Head.setText("Output goes here");
 		this.Head.setEditable(false);
@@ -136,6 +137,8 @@ public class Interface extends JFrame {
 
 	private void loader() {
 		JFileChooser fc = new JFileChooser();
+		FileNameExtensionFilter filter=new FileNameExtensionFilter("Answer Keys (*.pk)", "pk");
+		fc.setFileFilter(filter);
 		fc.showOpenDialog(this);
 		if (Main.setFile(fc.getSelectedFile())) {
 			SpinnerNumberModel model = new SpinnerNumberModel(1, 1, Main.getNumRecords(), 1);
