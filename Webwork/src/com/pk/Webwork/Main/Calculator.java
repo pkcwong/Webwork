@@ -43,7 +43,7 @@ public class Calculator {
 	 * @param value
 	 *            constant
 	 */
-	public void addVariable(String var, float value) {
+	public void addVariable(String var, double value) {
 		this.Parser.addVariable(var, value);
 		this.var.add(var);
 	}
@@ -52,7 +52,7 @@ public class Calculator {
 	 * RESETS VARIABLE LIST
 	 * <p>
 	 */
-	public void clearVariable() {
+	private void clearVariable() {
 		while (var.size() != 0) {
 			this.Parser.removeVariable(var.get(0));
 			var.remove(0);
@@ -84,4 +84,8 @@ public class Calculator {
 		return Parser.getValue();
 	}
 
+	public String errLog() {
+		return this.Parser.getErrorInfo();
+	}
+	
 }
