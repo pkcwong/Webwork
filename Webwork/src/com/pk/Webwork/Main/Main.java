@@ -135,30 +135,61 @@ public class Main {
 	 * <p>
 	 */
 	public static void execute() {
-		cal.clear();
-		cal.input(expression);
-		Frame.writeHead(">>> " + expression);
-		for (int i = 0; i != value.size(); i++) {
-			if (var.size() > i) {
-				cal.addVariable(var.get(i), value.get(i));
-				Frame.writeBody("Compiled @param ' " + var.get(i) + " '");
-			} else {
-				Frame.writeBody("[WARNING] Extra args[ ] ' " + value.get(i) + " '");
+		Frame.writeBody("Compiling...");
+		Frame.writeHead("Computing...");
+		if (expression != null && !expression.isEmpty()) {
+			String[] query = expression.split("\\s+");
+			for (int k = 0; k != query.length; k++) {
+				cal.clear();
+				cal.input(query[k]);
+				Frame.writeHead(">>> " + query[k]);
+				for (int i = 0; i != value.size(); i++) {
+					if (var.size() > i) {
+						cal.addVariable(var.get(i), value.get(i));
+						Frame.writeBody("Compiled @param ' " + var.get(i) + " '");
+					} else {
+						Frame.writeBody("[WARNING] Extra args[ ] ' " + value.get(i) + " '");
+					}
+				}
+				if (N != 0) {
+					if (cal.validate()) {
+						Frame.writeBody("Expression evaluated to " + cal.evaluate());
+						Frame.writeHead("\t" + cal.evaluate());
+					} else {
+						Frame.writeBody("[ERROR] See Parser log");
+						Frame.writeHead(cal.errLog());
+					}
+				} else {
+					Frame.writeBody("Expression evaluated to " + query[k]);
+					Frame.writeHead("\t" + query[k]);
+				}
 			}
 		}
-		if (N != 0) {
-			if (cal.validate()) {
-				Frame.writeBody("Expression evaluated to " + cal.evaluate());
-				Frame.writeHead("\t" + cal.evaluate());
-			} else {
-				Frame.writeBody("[ERROR] See Parser log");
-				Frame.writeHead(cal.errLog());
+		else {
+			cal.clear();
+			cal.input(expression);
+			Frame.writeHead(">>> " + expression);
+			for (int i = 0; i != value.size(); i++) {
+				if (var.size() > i) {
+					cal.addVariable(var.get(i), value.get(i));
+					Frame.writeBody("Compiled @param ' " + var.get(i) + " '");
+				} else {
+					Frame.writeBody("[WARNING] Extra args[ ] ' " + value.get(i) + " '");
+				}
 			}
-		} else {
-			Frame.writeBody("Expression evaluated to " + expression);
-			Frame.writeHead("\t" + expression);
+			if (N != 0) {
+				if (cal.validate()) {
+					Frame.writeBody("Expression evaluated to " + cal.evaluate());
+					Frame.writeHead("\t" + cal.evaluate());
+				} else {
+					Frame.writeBody("[ERROR] See Parser log");
+					Frame.writeHead(cal.errLog());
+				}
+			} else {
+				Frame.writeBody("Expression evaluated to " + expression);
+				Frame.writeHead("\t" + expression);
+			}
 		}
-
 	}
 
 	/**
