@@ -14,7 +14,7 @@ public class Main {
 	public static int N;
 	public static ArrayList<String> var = new ArrayList<String>();
 	public static ArrayList<Double> value = new ArrayList<Double>();
-	public static String expression = "1+2";
+	public static String expression;
 
 	public static void main(String[] args) {
 		Frame = new Interface();
@@ -31,7 +31,7 @@ public class Main {
 	public static boolean setFile(File f) {
 		if (f != null) {
 			key = f;
-			Frame.writeBody("loaded File '" + key.getName() + "'");
+			Frame.writeBody("loaded File ' " + key.getName() + " '");
 			Frame.writeBody("Found " + getNumRecords() + " records");
 			return true;
 		}
@@ -47,13 +47,30 @@ public class Main {
 	 *            question number
 	 */
 	public static void load(int id) {
+		while (var.size() != 0) {
+			var.remove(0);
+		}
 		try {
 			load = new Scanner(key);
 			// TODO: load file
 			int i = 0;
 			while (i != id) {
-
+				String line = load.nextLine();
+				if (line.equals("#")) {
+					i++;
+				}
+				if (i == id) {
+					expression = load.nextLine();
+					Frame.writeBody("Loaded expression ' " + expression + " '");
+					N = load.nextInt();
+					for (int j = 0; j != N; j++) {
+						String tempVar = load.next();
+						var.add(tempVar);
+						Frame.writeBody("Loaded var ' " + tempVar + " '");
+					}
+				}
 			}
+
 		} catch (Exception err) {
 			Frame.writeBody("[ERROR] There is a problem loading file");
 			err.printStackTrace();
@@ -93,7 +110,24 @@ public class Main {
 		clear();
 		input.replace("\n", " ");
 		String[] parts = input.split("\\s+");
-		// TODO: extract user input
+		for (int i = 0; i != parts.length; i++) {
+			Frame.writeBody("Got input ' " + parts[i] + " '");
+			Calculator tempCal = new Calculator();
+			tempCal.clear();
+			for (int j = 0; j != value.size(); j++) {
+				if (var.size() > j) {
+					tempCal.addVariable(var.get(j), value.get(j));
+				}
+			}
+			tempCal.input(parts[i]);
+			if (tempCal.validate()) {
+				double val = tempCal.evaluate();
+				value.add(val);
+				Frame.writeBody("Evaluated to " + val);
+			} else {
+				Frame.writeBody("[WARNING] Cannot parse input");
+			}
+		}
 	}
 
 	/**
@@ -101,17 +135,33 @@ public class Main {
 	 * <p>
 	 */
 	public static void execute() {
-		// TODO: call Parser
-		
+		cal.clear();
+		cal.input(expression);
+		Frame.writeHead(">>> " + expression);
+		if (N != 0) {
+			for (int i = 0; i != value.size(); i++) {
+				if (var.size() > i) {
+					cal.addVariable(var.get(i), value.get(i));
+					Frame.writeBody("Compiled @param ' " + var.get(i) + " '");
+				} else {
+					Frame.writeBody("[WARNING] Extra args ' " + value.get(i) + " '");
+				}
+			}
+			if (cal.validate()) {
+				Frame.writeBody("Evaluated as " + cal.evaluate());
+				Frame.writeHead("\t" + cal.evaluate());
+			}
+		}
+		else {
+			Frame.writeBody("Evaluated as " + expression);
+			Frame.writeHead("\t" + expression);
+		}
 	}
 
 	/**
 	 * RESETS USER INPUT
 	 */
 	public static void clear() {
-		while (var.size() != 0) {
-			var.remove(0);
-		}
 		while (value.size() != 0) {
 			value.remove(0);
 		}

@@ -9,14 +9,14 @@ public class Calculator {
 	private String expression;
 
 	public Calculator() {
-		this.init();
+		this.clear();
 	}
 
 	/**
 	 * CLEARS ALL DATA
 	 * <p>
 	 */
-	public void init() {
+	public void clear() {
 		this.Parser = new org.nfunk.jep.JEP();
 		this.Parser.addStandardFunctions();
 		this.Parser.addStandardConstants();

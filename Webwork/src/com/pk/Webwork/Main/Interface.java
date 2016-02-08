@@ -144,6 +144,8 @@ public class Interface extends JFrame {
 			SpinnerNumberModel model = new SpinnerNumberModel(0, 0, 0, 1);
 			num.setModel(model);
 		}
+		JFormattedTextField tf = ((JSpinner.DefaultEditor) num.getEditor()).getTextField();
+		tf.setEditable(false);
 	}
 
 	private void refresh() {
