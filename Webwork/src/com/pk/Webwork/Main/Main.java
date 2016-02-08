@@ -52,7 +52,6 @@ public class Main {
 		}
 		try {
 			load = new Scanner(key);
-			// TODO: load file
 			int i = 0;
 			while (i != id) {
 				String line = load.nextLine();

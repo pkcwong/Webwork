@@ -117,7 +117,7 @@ public class Interface extends JFrame {
 		this.setContentPane(this.Panel);
 		this.validate();
 		Insets insets = this.getInsets();
-		this.setSize(400 + insets.left + insets.right, 300 + insets.top + insets.bottom);
+		this.setSize(500 + insets.left + insets.right, 300 + insets.top + insets.bottom);
 		this.setLocationRelativeTo(null);
 	}
 
