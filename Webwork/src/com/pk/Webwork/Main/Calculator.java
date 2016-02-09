@@ -1,26 +1,22 @@
 package com.pk.Webwork.Main;
 
-import java.util.ArrayList;
-
 public class Calculator {
 
 	private org.nfunk.jep.JEP Parser;
-	private ArrayList<String> var;
 	private String expression;
 
 	public Calculator() {
-		this.clear();
+		this.reset();
 	}
 
 	/**
 	 * CLEARS ALL DATA
 	 * <p>
 	 */
-	public void clear() {
+	public void reset() {
 		this.Parser = new org.nfunk.jep.JEP();
 		this.Parser.addStandardFunctions();
 		this.Parser.addStandardConstants();
-		var = new ArrayList<String>();
 	}
 
 	/**
@@ -45,18 +41,6 @@ public class Calculator {
 	 */
 	public void addVariable(String var, double value) {
 		this.Parser.addVariable(var, value);
-		this.var.add(var);
-	}
-
-	/**
-	 * RESETS VARIABLE LIST
-	 * <p>
-	 */
-	private void clearVariable() {
-		while (var.size() != 0) {
-			this.Parser.removeVariable(var.get(0));
-			var.remove(0);
-		}
 	}
 
 	/**

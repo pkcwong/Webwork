@@ -12,11 +12,12 @@ public class Main {
 	private static Calculator cal = new Calculator();
 	private static Interface Frame;
 	public static int N;
+	public static int M;
 	private static String remarks;
 	public static ArrayList<String> var = new ArrayList<String>();
-	public static ArrayList<Double> value = new ArrayList<Double>();
-	private static ArrayList<String> sysVar=new ArrayList<String>();
-	private static ArrayList<String> sysValue=new ArrayList<String>();
+	public static ArrayList<String> value = new ArrayList<String>();
+	private static ArrayList<String> sysVar = new ArrayList<String>();
+	private static ArrayList<String> sysValue = new ArrayList<String>();
 	public static String expression;
 
 	public static void main(String[] args) {
@@ -50,9 +51,7 @@ public class Main {
 	 *            question number
 	 */
 	public static void load(int id) {
-		while (var.size() != 0) {
-			var.remove(0);
-		}
+		clearSys();
 		try {
 			load = new Scanner(key);
 			int i = 0;
@@ -62,7 +61,42 @@ public class Main {
 					i++;
 				}
 				if (i == id) {
-					//TODO
+					String text = "";
+					remarks = load.nextLine();
+					Frame.writeHead(remarks);
+					expression = load.nextLine();
+					N = load.nextInt();
+					for (int j = 0; j != N; j++) {
+						String defaultVar = load.next();
+						String defaultExpression = load.next();
+						var.add(defaultVar);
+						value.add(defaultExpression);
+						text = text + defaultExpression + "\n";
+						cal.input(defaultExpression);
+						if (cal.validate()) {
+							cal.addVariable(defaultVar, cal.evaluate());
+							Frame.writeBody("Loaded Var" + defaultVar + "=" + cal.evaluate());
+						} else {
+							Frame.writeBody("[ERROR] See Parser");
+							Frame.writeHead(cal.errLog());
+						}
+					}
+					Frame.Input.setText(text);
+					M = load.nextInt();
+					for (int j = 0; j != M; j++) {
+						String defaultVar = load.next();
+						String defaultExpression = load.next();
+						sysVar.add(defaultVar);
+						sysValue.add(defaultExpression);
+						cal.input(defaultExpression);
+						if (cal.validate()) {
+							cal.addVariable(defaultVar, cal.evaluate());
+							Frame.writeBody("Loaded sysVar " + defaultVar + "=" + cal.evaluate());
+						} else {
+							Frame.writeBody("[ERROR] See Parser");
+							Frame.writeHead(cal.errLog());
+						}
+					}
 				}
 			}
 		} catch (Exception err) {
@@ -101,12 +135,32 @@ public class Main {
 	 * @param input
 	 */
 	public static void input(String input) {
-		clear();
+		clearUser();
 		input.replace("\n", " ");
 		if (input != null && !input.isEmpty()) {
 			String[] parts = input.split("\\s+");
 			for (int i = 0; i != parts.length; i++) {
-				//TODO
+				value.add(parts[i]);
+				Frame.writeBody("Got input ' " + parts[i] + " '");
+				cal.input(parts[i]);
+				if (cal.validate()) {
+					cal.addVariable(var.get(i), cal.evaluate());
+					Frame.writeBody("Evaluated to ' " + cal.evaluate() + " '");
+				} else {
+					Frame.writeBody("[ERROR] See Parser");
+					Frame.writeHead(cal.errLog());
+				}
+			}
+		}
+		for (int i = 0; i != sysVar.size(); i++) {
+			Frame.writeBody("Got sysVar ' " + sysVar.get(i) + " '");
+			cal.input(sysValue.get(i));
+			if (cal.validate()) {
+				cal.addVariable(sysVar.get(i), cal.evaluate());
+				Frame.writeBody("Evaluated to ' " + cal.evaluate() + " '");
+			} else {
+				Frame.writeBody("[ERROR] See Parser");
+				Frame.writeHead(cal.errLog());
 			}
 		}
 	}
@@ -117,14 +171,45 @@ public class Main {
 	 */
 	public static void execute() {
 		Frame.writeBody("Compiling...");
-		Frame.writeHead("Computing...");
-		//TODO
+		Frame.writeHead(">>> " + expression);
+		if (N != 0 || M != 0) {
+			cal.input(expression);
+			if (cal.validate()) {
+				Frame.writeBody("Success");
+				Frame.writeHead("\t" + cal.evaluate());
+			} else {
+				Frame.writeBody("[ERROR] See Parser");
+				Frame.writeHead(cal.errLog());
+			}
+		}
+		else {
+			Frame.writeBody("Success");
+			Frame.writeHead("\t" + expression);
+		}
+	}
+
+	/**
+	 * RESETS SYSTEM VARIABLES
+	 * <p>
+	 */
+	public static void clearSys() {
+		cal.reset();
+		while (var.size() != 0) {
+			var.remove(0);
+		}
+		while (sysVar.size() != 0) {
+			sysVar.remove(0);
+		}
+		while (sysValue.size() != 0) {
+			sysValue.remove(0);
+		}
 	}
 
 	/**
 	 * RESETS USER INPUT
+	 * <p>
 	 */
-	public static void clear() {
+	public static void clearUser() {
 		while (value.size() != 0) {
 			value.remove(0);
 		}

@@ -21,14 +21,13 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class Interface extends JFrame {
 
-	private JScrollPane scrPane;
 	private JPanel Panel = new JPanel();
 	private JLabel Head_t = new JLabel("Output:");
 	private JLabel Body_t = new JLabel("Console:");
 	private JLabel Input_t = new JLabel("Input args[ ]: ");
 	private JTextArea Head = new JTextArea(5, 20);
 	private JTextArea Body = new JTextArea(5, 20);
-	private JTextArea Input = new JTextArea(12, 10);
+	public JTextArea Input = new JTextArea(12, 10);
 	private JButton load = new JButton("Load");
 	private JButton refresh = new JButton("Refresh");
 	private JSpinner num = new JSpinner();
