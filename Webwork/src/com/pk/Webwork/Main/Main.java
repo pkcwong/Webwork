@@ -12,8 +12,11 @@ public class Main {
 	private static Calculator cal = new Calculator();
 	private static Interface Frame;
 	public static int N;
+	private static String remarks;
 	public static ArrayList<String> var = new ArrayList<String>();
 	public static ArrayList<Double> value = new ArrayList<Double>();
+	private static ArrayList<String> sysVar=new ArrayList<String>();
+	private static ArrayList<String> sysValue=new ArrayList<String>();
 	public static String expression;
 
 	public static void main(String[] args) {
@@ -59,14 +62,7 @@ public class Main {
 					i++;
 				}
 				if (i == id) {
-					expression = load.nextLine();
-					Frame.writeBody("Loaded expression ' " + expression + " '");
-					N = load.nextInt();
-					for (int j = 0; j != N; j++) {
-						String tempVar = load.next();
-						var.add(tempVar);
-						Frame.writeBody("Loaded var ' " + tempVar + " '");
-					}
+					//TODO
 				}
 			}
 		} catch (Exception err) {
@@ -110,22 +106,7 @@ public class Main {
 		if (input != null && !input.isEmpty()) {
 			String[] parts = input.split("\\s+");
 			for (int i = 0; i != parts.length; i++) {
-				Frame.writeBody("Got input ' " + parts[i] + " '");
-				Calculator tempCal = new Calculator();
-				tempCal.clear();
-				for (int j = 0; j != value.size(); j++) {
-					if (var.size() > j) {
-						tempCal.addVariable(var.get(j), value.get(j));
-					}
-				}
-				tempCal.input(parts[i]);
-				if (tempCal.validate()) {
-					double val = tempCal.evaluate();
-					value.add(val);
-					Frame.writeBody("Evaluated to " + val);
-				} else {
-					Frame.writeBody("[WARNING] Cannot parse input");
-				}
+				//TODO
 			}
 		}
 	}
@@ -137,59 +118,7 @@ public class Main {
 	public static void execute() {
 		Frame.writeBody("Compiling...");
 		Frame.writeHead("Computing...");
-		if (expression != null && !expression.isEmpty()) {
-			String[] query = expression.split("\\s+");
-			for (int k = 0; k != query.length; k++) {
-				cal.clear();
-				cal.input(query[k]);
-				Frame.writeHead(">>> " + query[k]);
-				for (int i = 0; i != value.size(); i++) {
-					if (var.size() > i) {
-						cal.addVariable(var.get(i), value.get(i));
-						Frame.writeBody("Compiled @param ' " + var.get(i) + " '");
-					} else {
-						Frame.writeBody("[WARNING] Extra args[ ] ' " + value.get(i) + " '");
-					}
-				}
-				if (N != 0) {
-					if (cal.validate()) {
-						Frame.writeBody("Expression evaluated to " + cal.evaluate());
-						Frame.writeHead("\t" + cal.evaluate());
-					} else {
-						Frame.writeBody("[ERROR] See Parser log");
-						Frame.writeHead(cal.errLog());
-					}
-				} else {
-					Frame.writeBody("Expression evaluated to " + query[k]);
-					Frame.writeHead("\t" + query[k]);
-				}
-			}
-		}
-		else {
-			cal.clear();
-			cal.input(expression);
-			Frame.writeHead(">>> " + expression);
-			for (int i = 0; i != value.size(); i++) {
-				if (var.size() > i) {
-					cal.addVariable(var.get(i), value.get(i));
-					Frame.writeBody("Compiled @param ' " + var.get(i) + " '");
-				} else {
-					Frame.writeBody("[WARNING] Extra args[ ] ' " + value.get(i) + " '");
-				}
-			}
-			if (N != 0) {
-				if (cal.validate()) {
-					Frame.writeBody("Expression evaluated to " + cal.evaluate());
-					Frame.writeHead("\t" + cal.evaluate());
-				} else {
-					Frame.writeBody("[ERROR] See Parser log");
-					Frame.writeHead(cal.errLog());
-				}
-			} else {
-				Frame.writeBody("Expression evaluated to " + expression);
-				Frame.writeHead("\t" + expression);
-			}
-		}
+		//TODO
 	}
 
 	/**
