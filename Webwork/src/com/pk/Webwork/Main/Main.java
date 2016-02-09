@@ -35,7 +35,7 @@ public class Main {
 	public static boolean setFile(File f) {
 		if (f != null) {
 			key = f;
-			Frame.writeBody("loaded File ' " + key.getName() + " '");
+			Frame.writeBody("Loaded File ' " + key.getName() + " '");
 			Frame.writeBody("Found " + getNumRecords() + " records");
 			return true;
 		}
@@ -75,13 +75,15 @@ public class Main {
 						cal.input(defaultExpression);
 						if (cal.validate()) {
 							cal.addVariable(defaultVar, cal.evaluate());
-							Frame.writeBody("Loaded Var" + defaultVar + "=" + cal.evaluate());
+							Frame.writeBody("Loaded Var " + defaultVar + "=" + cal.evaluate());
 						} else {
 							Frame.writeBody("[ERROR] See Parser");
 							Frame.writeHead(cal.errLog());
 						}
 					}
-					Frame.Input.setText(text);
+					if (Frame.Input.getText() == null || Frame.Input.getText().isEmpty()) {
+						Frame.Input.setText(text);
+					}
 					M = load.nextInt();
 					for (int j = 0; j != M; j++) {
 						String defaultVar = load.next();
@@ -140,24 +142,29 @@ public class Main {
 		if (input != null && !input.isEmpty()) {
 			String[] parts = input.split("\\s+");
 			for (int i = 0; i != parts.length; i++) {
-				value.add(parts[i]);
-				Frame.writeBody("Got input ' " + parts[i] + " '");
-				cal.input(parts[i]);
-				if (cal.validate()) {
-					cal.addVariable(var.get(i), cal.evaluate());
-					Frame.writeBody("Evaluated to ' " + cal.evaluate() + " '");
+				if (i < N) {
+					value.add(parts[i]);
+					cal.input(parts[i]);
+					if (cal.validate()) {
+						cal.addVariable(var.get(i), cal.evaluate());
+						Frame.writeBody("Set " + var.get(i) + "=" + cal.evaluate());
+					} else {
+						Frame.writeBody("[ERROR] See Parser");
+						Frame.writeHead(cal.errLog());
+					}
 				} else {
-					Frame.writeBody("[ERROR] See Parser");
-					Frame.writeHead(cal.errLog());
+					Frame.writeBody("[WARNING] Extra args[ ] '" + parts[i] + "'");
 				}
+			}
+			for (int i = 0; i < var.size() - parts.length; i++) {
+				Frame.writeBody("[WARNING] Missing args[ ] '" + var.get(parts.length + i - 1));
 			}
 		}
 		for (int i = 0; i != sysVar.size(); i++) {
-			Frame.writeBody("Got sysVar ' " + sysVar.get(i) + " '");
 			cal.input(sysValue.get(i));
 			if (cal.validate()) {
 				cal.addVariable(sysVar.get(i), cal.evaluate());
-				Frame.writeBody("Evaluated to ' " + cal.evaluate() + " '");
+				Frame.writeBody("Set " + sysVar.get(i) + "=" + cal.evaluate());
 			} else {
 				Frame.writeBody("[ERROR] See Parser");
 				Frame.writeHead(cal.errLog());
@@ -181,8 +188,7 @@ public class Main {
 				Frame.writeBody("[ERROR] See Parser");
 				Frame.writeHead(cal.errLog());
 			}
-		}
-		else {
+		} else {
 			Frame.writeBody("Success");
 			Frame.writeHead("\t" + expression);
 		}
