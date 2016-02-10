@@ -1,7 +1,11 @@
 package com.pk.Webwork.Main;
 
+import org.nfunk.jep.JEP;
+
+import com.pk.Webwork.Functions.Power_pk;
+
 public class Calculator {
-	private org.nfunk.jep.JEP Parser;
+	private JEP Parser;
 	private String expression;
 
 	public Calculator() {
@@ -16,6 +20,7 @@ public class Calculator {
 		this.Parser = new org.nfunk.jep.JEP();
 		this.Parser.addStandardFunctions();
 		this.Parser.addStandardConstants();
+		this.Parser.addFunction("pow", new Power_pk());
 	}
 
 	/**
