@@ -1,7 +1,6 @@
 package com.pk.Webwork.Main;
 
 public class Calculator {
-
 	private org.nfunk.jep.JEP Parser;
 	private String expression;
 

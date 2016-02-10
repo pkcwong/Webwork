@@ -138,6 +138,9 @@ public class Interface extends JFrame {
 		JFileChooser fc = new JFileChooser();
 		FileNameExtensionFilter filter=new FileNameExtensionFilter("Answer Keys (*.pk)", "pk");
 		fc.setFileFilter(filter);
+		if (Main.key!=null) {
+			fc.setCurrentDirectory(Main.key.getParentFile());
+		}
 		fc.showOpenDialog(this);
 		if (Main.setFile(fc.getSelectedFile())) {
 			SpinnerNumberModel model = new SpinnerNumberModel(1, 1, Main.getNumRecords(), 1);

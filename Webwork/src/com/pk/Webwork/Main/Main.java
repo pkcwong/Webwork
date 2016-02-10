@@ -179,18 +179,18 @@ public class Main {
 	public static void execute() {
 		Frame.writeBody("Compiling...");
 		Frame.writeHead(">>> " + expression);
-		if (N != 0 || M != 0) {
-			cal.input(expression);
-			if (cal.validate()) {
-				Frame.writeBody("Success");
-				Frame.writeHead("\t" + cal.evaluate());
-			} else {
+		cal.input(expression);
+		if (cal.validate()) {
+			Frame.writeBody("Success");
+			Frame.writeHead("\t" + cal.evaluate());
+		} else {
+			if (N != 0 || M != 0) {
 				Frame.writeBody("[ERROR] See Parser");
 				Frame.writeHead(cal.errLog());
+			} else {
+				Frame.writeBody("Success");
+				Frame.writeHead("\t" + expression);
 			}
-		} else {
-			Frame.writeBody("Success");
-			Frame.writeHead("\t" + expression);
 		}
 	}
 
