@@ -65,7 +65,7 @@ public class Main {
 					String text = "";
 					remarks = load.nextLine();
 					Frame.writeHead(remarks);
-					comments=load.nextLine();
+					comments = load.nextLine();
 					Frame.writeHead(comments);
 					expression = load.nextLine();
 					N = load.nextInt();
@@ -194,8 +194,7 @@ public class Main {
 					Frame.writeHead(cal.errLog());
 				}
 			}
-		}
-		else {
+		} else {
 			Frame.writeBody("Nothing to compute");
 			Frame.writeHead(">>> " + expression);
 			Frame.writeHead("\t" + expression);
