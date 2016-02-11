@@ -14,7 +14,6 @@ public class Power_pk extends PostfixMathCommand {
 		super.checkStack(inStack);
 		Object param_b = inStack.pop();
 		Object param_a = inStack.pop();
-		System.out.println("hi");
 		if (param_a instanceof Double && param_b instanceof Double) {
 			double a=((Double) (param_a)).doubleValue();
 			double b=((Double) (param_b)).doubleValue();
