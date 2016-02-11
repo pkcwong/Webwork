@@ -14,6 +14,7 @@ public class Main {
 	public static int N;
 	public static int M;
 	private static String remarks;
+	private static String comments;
 	public static ArrayList<String> var = new ArrayList<String>();
 	public static ArrayList<String> value = new ArrayList<String>();
 	private static ArrayList<String> sysVar = new ArrayList<String>();
@@ -64,6 +65,8 @@ public class Main {
 					String text = "";
 					remarks = load.nextLine();
 					Frame.writeHead(remarks);
+					comments=load.nextLine();
+					Frame.writeHead(comments);
 					expression = load.nextLine();
 					N = load.nextInt();
 					for (int j = 0; j != N; j++) {
