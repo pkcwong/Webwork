@@ -15,17 +15,20 @@ public class Power_pk extends PostfixMathCommand {
 		Object param_b = inStack.pop();
 		Object param_a = inStack.pop();
 		if (param_a instanceof Double && param_b instanceof Double) {
-			double a=((Double) (param_a)).doubleValue();
-			double b=((Double) (param_b)).doubleValue();
+			double a = ((Double) (param_a)).doubleValue();
+			double b = ((Double) (param_b)).doubleValue();
 			int k;
-			if (a>=0) {
-				k=1;
+			if (a >= 0) {
+				k = 1;
+			} else {
+				a = -a;
+				if (b % 2 == 0) {
+					k = 1;
+				} else {
+					k = -1;
+				}
 			}
-			else {
-				a=-a;
-				k=-1;
-			}
-			double r = k*Math.pow(a, b);
+			double r = k * Math.pow(a, b);
 			inStack.push(new Double(r));
 		} else {
 			throw new ParseException("Error in Power.java");
