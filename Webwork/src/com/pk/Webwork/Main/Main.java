@@ -178,19 +178,24 @@ public class Main {
 	 */
 	public static void execute() {
 		Frame.writeBody("Compiling...");
-		Frame.writeHead(">>> " + expression);
-		cal.input(expression);
-		if (cal.validate()) {
-			Frame.writeBody("Success");
-			Frame.writeHead("\t" + cal.evaluate());
-		} else {
-			if (N != 0 || M != 0) {
-				Frame.writeBody("[ERROR] See Parser");
-				Frame.writeHead(cal.errLog());
-			} else {
-				Frame.writeBody("Success");
-				Frame.writeHead("\t" + expression);
+		String[] parts = expression.split("\\s+");
+		if (N != 0 || M != 0) {
+			for (int i = 0; i != parts.length; i++) {
+				Frame.writeHead(">>> " + parts[i]);
+				cal.input(parts[i]);
+				if (cal.validate()) {
+					Frame.writeBody("Success");
+					Frame.writeHead("\t" + cal.evaluate());
+				} else {
+					Frame.writeBody("[ERROR] See Parser");
+					Frame.writeHead(cal.errLog());
+				}
 			}
+		}
+		else {
+			Frame.writeBody("Nothing to compute");
+			Frame.writeHead(">>> " + expression);
+			Frame.writeHead("\t" + expression);
 		}
 	}
 
