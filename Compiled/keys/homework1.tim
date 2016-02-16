@@ -57,9 +57,9 @@ q 0.3*pi
 1
 x atan(b/a)
 #
-auestion 6
-q=adgs[0]*x^adgs[1]+adgs[2]*x^adgs[3]+adgs[4]*x^adgs[5] q=adgs[6]*x^adgs[7]+adgs[8]*x^adgs[9]
-cs(a*C^(b+1)/(b+1)+c*C^(d+1)/(d+1)+p*C^(q+1)/(q+1)-r*C^(j+1)/(j+1)-k*C^(l+1)/(l+1)-(a*B^(b+1)/(b+1)+c*B^(d+1)/(d+1)+p*B^(q+1)/(q+1)-r*B^(j+1)/(j+1)-k*B^(l+1)/(l+1)))+cs(a*B^(b+1)/(b+1)+c*B^(d+1)/(d+1)+p*B^(q+1)/(q+1)-r*B^(j+1)/(j+1)-k*B^(l+1)/(l+1)-(a*A^(b+1)/(b+1)+c*A^(d+1)/(d+1)+p*A^(q+1)/(q+1)-r*A^(j+1)/(j+1)-k*A^(l+1)/(l+1)))
+Question 6
+y=args[0]*x^args[1]+args[2]*x^args[3]+args[4]*x^args[5] y=args[6]*x^args[7]+args[8]*x^args[9]
+abs(a*C^(b+1)/(b+1)+c*C^(d+1)/(d+1)+p*C^(q+1)/(q+1)-r*C^(j+1)/(j+1)-k*C^(l+1)/(l+1)-(a*B^(b+1)/(b+1)+c*B^(d+1)/(d+1)+p*B^(q+1)/(q+1)-r*B^(j+1)/(j+1)-k*B^(l+1)/(l+1)))+abs(a*B^(b+1)/(b+1)+c*B^(d+1)/(d+1)+p*B^(q+1)/(q+1)-r*B^(j+1)/(j+1)-k*B^(l+1)/(l+1)-(a*A^(b+1)/(b+1)+c*A^(d+1)/(d+1)+p*A^(q+1)/(q+1)-r*A^(j+1)/(j+1)-k*A^(l+1)/(l+1)))
 10
 a 5
 b 2
