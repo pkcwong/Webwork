@@ -398,7 +398,7 @@ a cylinder of radius pi+y and height cos(args[1]*y)-sin(args[0]*y)
 #
 Question 13 [Wrong Answer]
 y=e^{args[0]x}+args[1] y=args[2] x=args[3] x=args[4]
-pi*(pow(e,2*a*f)/2/a+2*5*pow(e,a*f)/a+pow(b,2)*f-c*f)-pi*(pow(e,2*a*d)/2/a+2*5*pow(e,a*d)/a+pow(b,2)*d-c*d)
+pi*(pow(e,2*a*f)/2/a+2*b*pow(e,a*f)/a+pow(b,2)*f-c*f)-pi*(pow(e,2*a*d)/2/a+2*b*pow(e,a*d)/a+pow(b,2)*d-c*d)
 5
 a 5
 b 5
