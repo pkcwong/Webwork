@@ -1,0 +1,493 @@
+#
+Question 1
+Multiple Choices Question
+The change in the charge Q from time t = a to t = b.
+0
+0
+#
+Question 2
+Multiple Choices Question
+The increase in the child's weight (in pounds) between the ages of 5 and 10.
+0
+0
+#
+Question 3.1
+v(t)=args[0]*t^2+args[1]*t+args[2]
+(a/3*pow(q,3)+b/2*pow(q,2)+c*q)-(a/3*pow(p,3)+b/2*pow(p,2)+c*p)
+5
+a -1
+b 6
+c -8
+p 0
+q 6
+0
+#
+Question 3.2
+v(t)=args[0]*t^2+args[1]*t+args[2]
+(a/3*pow(p,3)+b/2*pow(p,2)+c*p)-(a/3*pow(m,3)+b/2*pow(m,2)+c*m)+(a/3*pow(n,3)+b/2*pow(n,2)+c*n)-(a/3*pow(m,3)+b/2*pow(m,2)+c*m)+(a/3*pow(n,3)+b/2*pow(n,2)+c*n)-(a/3*pow(q,3)+b/2*pow(q,2)+c*q)
+5
+a -1
+b 6
+c -8
+p 0
+q 6
+2
+m (-b-abs(a)/a*pow(b^2-4*a*c,1/2))/(2*a)
+n (-b+abs(a)/a*pow(b^2-4*a*c,1/2))/(2*a)
+#
+Question 4
+a(t)=args[0]*t+args[1] s(0)=args[2] v(0)=args[3]
+a/6*pow(t,3)+b/2*pow(t,2)+d*t+c
+5
+a 6
+b 10
+c 13
+d 3
+t 15
+0
+#
+Question 5
+y=args[0]*sin(x) y=args[1]*cos(x) x=args[2] x=args[3]
+abs((-a*cos(x)-b*sin(x))-(-a*cos(p)-b*sin(p)))+abs((-a*cos(q)-b*sin(q))-(-a*cos(x)-b*sin(x)))
+4
+a 4
+b 2
+p 0
+q 0.3*pi
+1
+x atan(b/a)
+#
+auestion 6
+q=adgs[0]*x^adgs[1]+adgs[2]*x^adgs[3]+adgs[4]*x^adgs[5] q=adgs[6]*x^adgs[7]+adgs[8]*x^adgs[9]
+cs(a*C^(b+1)/(b+1)+c*C^(d+1)/(d+1)+p*C^(q+1)/(q+1)-r*C^(j+1)/(j+1)-k*C^(l+1)/(l+1)-(a*B^(b+1)/(b+1)+c*B^(d+1)/(d+1)+p*B^(q+1)/(q+1)-r*B^(j+1)/(j+1)-k*B^(l+1)/(l+1)))+cs(a*B^(b+1)/(b+1)+c*B^(d+1)/(d+1)+p*B^(q+1)/(q+1)-r*B^(j+1)/(j+1)-k*B^(l+1)/(l+1)-(a*A^(b+1)/(b+1)+c*A^(d+1)/(d+1)+p*A^(q+1)/(q+1)-r*A^(j+1)/(j+1)-k*A^(l+1)/(l+1)))
+10
+a 5
+b 2
+c -1
+d 3
+p 1
+q 1
+r 1
+j 2
+k 4
+l 1
+3
+A 0
+B (-(a-r)+((a-r)^(2)-4*(c)*(p-k))^(0.5))/2/c
+C (-(a-r)-((a-r)^(2)-4*(c)*(p-k))^(0.5))/2/c
+#
+Question 7
+y=args[0]*x+args[1]*x^2
+pow((-pow(a,3)/2),1/3)+a
+2
+a 4
+b -3
+0
+#
+Question 8.1
+args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
+-bb
+10
+aa 1
+ax 1
+ab 3
+ay 1
+ac 34
+ba 1
+bx 1
+bb 6
+bc 1
+by 2
+0
+#
+Question 8.2
+args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
+(-(q)-pow((pow(q,2)-4*(p)*(r)),1/2))/(2)/(p)
+10
+aa 1
+ax 1
+ab 3
+ay 1
+ac 34
+ba 1
+bx 1
+bb 6
+bc 1
+by 2
+3
+p pow(-aa,2)
+q 2*(ac)*(-aa)-pow(ab,2)
+r pow(ac,2)-pow(ab,2)*(bb)
+#
+Question 8.3
+args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
+(-(q)+pow((pow(q,2)-4*(p)*(r)),1/2))/(2)/(p)
+10
+aa 1
+ax 1
+ab 3
+ay 1
+ac 34
+ba 1
+bx 1
+bb 6
+bc 1
+by 2
+3
+p pow(-aa,2)
+q 2*(ac)*(-aa)-pow(ab,2)
+r pow(ac,2)-pow(ab,2)*(bb)
+#
+Question 8.4
+args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
+2*pow(x+bb,1/by)
+10
+aa 1
+ax 1
+ab 3
+ay 1
+ac 34
+ba 1
+bx 1
+bb 6
+bc 1
+by 2
+0
+#
+Question 8.5
+args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
+(ac-x)/ab--pow(x+bb,1/by)
+10
+aa 1
+ax 1
+ab 3
+ay 1
+ac 34
+ba 1
+bx 1
+bb 6
+bc 1
+by 2
+0
+#
+Question 8.6
+args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
+(-(k)-pow(pow(k,2)-4*j*l,1/2))/2/j
+10
+aa 1
+ax 1
+ab 3
+ay 1
+ac 34
+ba 1
+bx 1
+bb 6
+bc 1
+by 2
+3
+j bc
+k ab
+l -bb-ac
+#
+#
+Question 8.7
+args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
+(-(k)+pow(pow(k,2)-4*j*l,1/2))/2/j
+10
+aa 1
+ax 1
+ab 3
+ay 1
+ac 34
+ba 1
+bx 1
+bb 6
+bc 1
+by 2
+3
+j bc
+k ab
+l -bb-ac
+#
+Question 8.8
+args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
+bc-(ab)*pow(y,ay)-((bc)*pow(y,by)-bb)
+10
+aa 1
+ax 1
+ab 3
+ay 1
+ac 34
+ba 1
+bx 1
+bb 6
+bc 1
+by 2
+0
+#
+Question 8.9
+args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
+((ac+bb)*(q)-(ab)*pow(q,ay+1)/(ay+1)-(bc)*pow(q,by+1)/(by+1))-((ac+bb)*(p)-(ab)*pow(p,ay+1)/(ay+1)-(bc)*pow(p,by+1)/(by+1))
+10
+aa 1
+ax 1
+ab 3
+ay 1
+ac 34
+ba 1
+bx 1
+bb 6
+bc 1
+by 2
+5
+j bc
+k ab
+l -bb-ac
+p (-(k)-pow(pow(k,2)-4*j*l,1/2))/2/j
+q (-(k)+pow(pow(k,2)-4*j*l,1/2))/2/j
+#
+Question 9.1 [Wrong Answer] with respect to y
+args[0]*y=args[1] y=args[2] args[3]*y+args[4]*x=args[5]
+I_m-I_l-(I_s-I_m)-(l_r+l_s) ((c-r/q)*B+(p/2/q)*pow(B,2))-((c-r/q)*A+(p/2/q)*pow(A,2))+(c*C-(2*b/3/a)*pow(C,3/2))-(c*B-(2*b/3/a)*pow(B,3/2))
+6
+a 2
+b 5
+c 5
+p 2
+q 2
+r 7
+12
+m (-p+pow(pow(p,2)-4*(pow(a,2)*q/pow(b,2))*(-r),1/2))/(2*(pow(a,2)*q/pow(b,2)))
+s r/p
+I_l r/q*0-p/(2*q)*pow(0,2)-pow(a,2)/(3*pow(b,2))*pow(0,3)
+I_m r/q*m-p/(2*q)*pow(m,2)-pow(a,2)/(3*pow(b,2))*pow(m,3)
+l_s r/q*s-p/(2*q)*pow(s,2)-pow(a,2)/(3*pow(b,2))*pow(s,3)
+I_r r/q*c-p/(2*q)*pow(c,2)-pow(a,2)/(3*pow(b,2))*pow(c,3)
+A (r-p*c)/q
+j pow(a*q,2)
+k -(2*a*a*q*r+pow(b*p,2)
+l pow(a*r)
+B (-(k)-pow(pow(k,2)-4*j*l,1/2))/2/j
+C pow(a*c/b,2)
+#
+Question 10.1
+y=f(x)=args[0] y=g(x)=args[1]
+-pow(a/b,1/2)
+2
+a 9
+b 16
+0
+#
+Question 10.2
+y=f(x)=args[0] y=g(x)=args[1]
+pow(a/b,1/2)
+2
+a 9
+b 16
+0
+#
+Question 10.3
+y=f(x)=args[0] y=g(x)=args[1]
+a-b*pow(x,2)
+2
+a 9
+b 16
+0
+#
+Question 10.4
+y=f(x)=args[0] y=g(x)=args[1]
+(a-b*pow(x,2))^2
+2
+a 9
+b 16
+0
+#
+Question 10.5
+y=f(x)=args[0] y=g(x)=args[1]
+abs((pow(a,2)*B-2*a*b*pow(B,3)/3+pow(b,2)*pow(B,5)/5)-(pow(a,2)*A-2*a*b*pow(A,3)/3+pow(b,2)*pow(A,5)/5))
+2
+a 9
+b 16
+2
+A -pow(a/b,1/2)
+B pow(a/b,1/2)
+#
+Question 11.1
+The base of a certain solid is an equilateral triangle with altitude args[0]
+0
+1
+a 15
+0
+#
+Question 11.2
+The base of a certain solid is an equilateral triangle with altitude args[0]
+a
+1
+a 15
+0
+#
+Question 11.3
+The base of a certain solid is an equilateral triangle with altitude args[0]
+pow(4*pow(x,2)/3,1/2)
+1
+a 15
+0
+#
+Question 11.4
+The base of a certain solid is an equilateral triangle with altitude args[0]
+pi*pow(pow(4*pow(x,2)/3,1/2)/2,2)/2
+1
+a 15
+0
+#
+Question 11.5
+The base of a certain solid is an equilateral triangle with altitude args[0]
+pi/18*(pow(B,3))-pi/18*(pow(A,3))
+3
+a 15
+A 0
+B a
+0
+#
+Question 12.1
+x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). The result of rotating the line about the x-axis is 
+a cylinder of radius y and height cos(Gy)-sin(Fy) 
+2
+F 2
+G 1
+0
+#
+Question 12.2
+x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). The result of rotating the line about the y-axis is 
+an annulus with inner radius sin(Fy) and outer radius cos(Gy)
+2
+F 2
+G 1
+0
+#
+Question 12.3
+x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). The result of rotating the line about the line y=1 is 
+a cylinder of radius 1-y and height cos(Gy)-sin(Fy)
+2
+F 2
+G 1
+0
+#
+Question 12.4
+x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). The result of rotating the line about the line x=-2 is 
+an annulus with inner radius 2+sin(Fy) and outer radius 2+cos(Gy) 
+2
+F 2
+G 1
+0
+#
+Question 12.5
+x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). The result of rotating the line about the line x=pi is 
+an annulus with inner radius pi-cos(Gy) and outer radius pi-sin(Fy) is 
+2
+F 2
+G 1
+0
+#
+Question 12.6
+x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). The result of rotating the line about the line y=-2 is 
+a cylinder of radius 2+y and height cos(Gy)-sin(Fy)
+2
+F 2
+G 1
+0
+#
+Question 12.7
+x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). The result of rotating the line about the line y=pi 
+a cylinder of radius pi-y and height cos(Gy)-sin(Fy)
+2
+F 2
+G 1
+0
+#
+Question 12.8
+x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). The result of rotating the line about the line y=-pi
+a cylinder of radius pi+y and height cos(Gy)-sin(Fy)
+2
+F 2
+G 1
+0
+#
+Question 13
+y=e^{args[0]x}+args[1] y=args[2] x=args[3] x=args[4]
+pi*(pow(e,2*a*f)/2/a+2*5*pow(e,a*f)/a+pow(b,2)*f-c*f)-pi*(pow(e,2*a*d)/2/a+2*5*pow(e,a*d)/a+pow(b,2)*d-c*d)
+5
+a 5
+b 5
+c 0
+d 0
+f 0.6
+0
+#
+Question 14
+y=args[0]x^args[1] and y=args[2]x is rotated around the line y=args[3]. 
+pi*((pow(j,2)*pow(B,2k+1)/(2k+1)-2*j*q*pow(B,k+1)/(k+1)+pow(q,2)*B)-(pow(p,2)*pow(B,3)/3-2*p*q*pow(B,2)/2+pow(q,2)*B))
+4
+j 1
+k 2
+p 5
+q 25
+2
+A 0 
+B p/j
+#
+Question 15
+y=(x-args[0])^(1/2) y=args[1] x=args[2] line y=args[3]
+pi*((((pow(b,2)-2*b*d+pow(d,2))*Q)-((pow(b,2)-2*b*d+pow(d,2))*P))-((pow(Q,2)/2-a*Q+pow(d,2)*Q-4*d/3*pow(Q-a,3/2))-(pow(P,2)/2-a*P+pow(d,2)*P-4*d/3*pow(P-a,3/2))))
+4
+a 1
+b 0
+c 5
+d 3
+2
+P a
+Q c
+#
+Question 16.1
+args[0]*x=args[1]*y y^args[2]=x
+pi*((b/a*y)^(2)-(y^(c))^(2))
+3
+a 1
+b 9
+c 3
+3
+P 0
+R pow(b,c/2)/b
+#
+Question 16.2
+args[0]*x=args[1]*y y^args[2]=x
+dy
+3
+a 1
+b 9
+c 3
+3
+P 0
+R pow(b,c/2)/b
+#
+Question 16.3
+args[0]*x=args[1]*y y^args[2]=x
+P
+3
+a 1
+b 9
+c 3
+3
+P 0
+R pow(b,c/2)/b
+#
+Question 16.4
+args[0]*x=args[1]*y y^args[2]=x
+R
+3
+a 1
+b 9
+c 3
+3
+P 0
+R pow(b,c/2)/b
