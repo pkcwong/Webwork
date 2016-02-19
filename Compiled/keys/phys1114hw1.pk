@@ -1,0 +1,77 @@
+#
+Question 22.6.A
+L=args[0] E=args[1] angle=args[2]
+-E*pow(L/100,2)*cos((90-A)*degToRad)
+3
+L 10
+E 4000
+A 36.9
+2
+radToDeg 180/pi
+degToRad pi/180
+#
+Question 22.6.B
+L=args[0] E=args[1] angle=args[2]
+0
+3
+L 10
+E 4000
+A 36.9
+2
+radToDeg 180/pi
+degToRad pi/180
+#
+Question 22.6.C
+L=args[0] E=args[1] angle=args[2]
+E*pow(L/100,2)*cos((90-A)*degToRad)
+3
+L 10
+E 4000
+A 36.9
+2
+radToDeg 180/pi
+degToRad pi/180
+#
+Question 22.6.D
+L=args[0] E=args[1] angle=args[2]
+0
+3
+L 10
+E 4000
+A 36.9
+2
+radToDeg 180/pi
+degToRad pi/180
+#
+Question 22.6.E
+L=args[0] E=args[1] angle=args[2]
+E*pow(L/100,2)*cos(A*degToRad)
+3
+L 10
+E 4000
+A 36.9
+2
+radToDeg 180/pi
+degToRad pi/180
+#
+Question 22.6.F
+L=args[0] E=args[1] angle=args[2]
+-E*pow(L/100,2)*cos((90-A)*degToRad)
+3
+L 10
+E 4000
+A 36.9
+2
+radToDeg 180/pi
+degToRad pi/180
+#
+Question 22.6.G
+L=args[0] E=args[1] angle=args[2]
+0
+3
+L 10
+E 4000
+A 36.9
+2
+radToDeg 180/pi
+degToRad pi/180
