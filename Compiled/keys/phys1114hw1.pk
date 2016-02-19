@@ -1,77 +1,120 @@
 #
 Question 22.6.A
-L=args[0] E=args[1] angle=args[2]
+L=args[0]cm E=args[1]N/C angle=args[2]deg
 -E*pow(L/100,2)*cos((90-A)*degToRad)
 3
 L 10
 E 4000
 A 36.9
-2
-radToDeg 180/pi
-degToRad pi/180
+0
 #
 Question 22.6.B
-L=args[0] E=args[1] angle=args[2]
+L=args[0]cm E=args[1]N/C angle=args[2]deg
 0
 3
 L 10
 E 4000
 A 36.9
-2
-radToDeg 180/pi
-degToRad pi/180
+0
 #
 Question 22.6.C
-L=args[0] E=args[1] angle=args[2]
+L=args[0]cm E=args[1]N/C angle=args[2]deg
 E*pow(L/100,2)*cos((90-A)*degToRad)
 3
 L 10
 E 4000
 A 36.9
-2
-radToDeg 180/pi
-degToRad pi/180
+0
 #
 Question 22.6.D
-L=args[0] E=args[1] angle=args[2]
+L=args[0]cm E=args[1]N/C angle=args[2]deg
 0
 3
 L 10
 E 4000
 A 36.9
-2
-radToDeg 180/pi
-degToRad pi/180
+0
 #
 Question 22.6.E
-L=args[0] E=args[1] angle=args[2]
+L=args[0]cm E=args[1]N/C angle=args[2]deg
 E*pow(L/100,2)*cos(A*degToRad)
 3
 L 10
 E 4000
 A 36.9
-2
-radToDeg 180/pi
-degToRad pi/180
+0
 #
 Question 22.6.F
-L=args[0] E=args[1] angle=args[2]
+L=args[0]cm E=args[1]N/C angle=args[2]deg
 -E*pow(L/100,2)*cos((90-A)*degToRad)
 3
 L 10
 E 4000
 A 36.9
-2
-radToDeg 180/pi
-degToRad pi/180
+0
 #
 Question 22.6.G
-L=args[0] E=args[1] angle=args[2]
+L=args[0]cm E=args[1]N/C angle=args[2]deg
 0
 3
 L 10
 E 4000
 A 36.9
-2
-radToDeg 180/pi
-degToRad pi/180
+0
+#
+Question 22.8.A
+q1=args[0]nC q2=args[1]nC q3=args[2]nC
+qa*pow(10,-9)/epsilon
+3
+qa 4.35
+qb -7.50
+qc 2.30
+0
+#
+Question 22.8.B
+q1=args[0]nC q2=args[1]nC q3=args[2]nC
+qb*pow(10,-9)/epsilon
+3
+qa 4.35
+qb -7.50
+qc 2.30
+0
+#
+Question 22.8.C
+q1=args[0]nC q2=args[1]nC q3=args[2]nC
+(qa+qb)*pow(10,-9)/epsilon
+3
+qa 4.35
+qb -7.50
+qc 2.30
+0
+#
+Question 22.8.D
+q1=args[0]nC q2=args[1]nC q3=args[2]nC
+(qa+qc)*pow(10,-9)/epsilon
+3
+qa 4.35
+qb -7.50
+qc 2.30
+0
+#
+Question 22.8.E
+q1=args[0]nC q2=args[1]nC q3=args[2]nC
+(qa+qb+qc)*pow(10,-9)/epsilon
+3
+qa 4.35
+qb -7.50
+qc 2.30
+0
+#
+Question 22.8.F
+MC Question
+no
+0
+0
+#
+Question 22.8.G
+Essay
+All that matters for Gauss’s law is the total amount of charge enclosed by the surface, not its distribution within the surface.
+0
+0

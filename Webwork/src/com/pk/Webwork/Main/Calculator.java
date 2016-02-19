@@ -5,6 +5,7 @@ import org.nfunk.jep.JEP;
 import com.pk.Webwork.Functions.Power_pk;
 
 public class Calculator {
+	
 	private JEP Parser;
 	private String expression;
 
@@ -21,6 +22,9 @@ public class Calculator {
 		this.Parser.addStandardFunctions();
 		this.Parser.addStandardConstants();
 		this.Parser.addFunction("pow", new Power_pk());
+		this.addVariable("degToRad", Math.PI/180);
+		this.addVariable("radToDeg", 180/Math.PI);
+		this.addVariable("epsilon", 8.854187817e-12);
 	}
 
 	/**
