@@ -118,3 +118,6 @@ Essay
 All that matters for Gauss's law is the total amount of charge enclosed by the surface, not its distribution within the surface.
 0
 0
+#
+Question 22.17.A
+length=args[0]uC/m length=args[1]uC/m y1=args[2]m
