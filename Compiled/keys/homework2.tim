@@ -40,7 +40,7 @@ c 0
 #
 Question 2.5
 x=args[0]*y^2 y=args[1] x=args[2]
-2*pi*(y-b)*(a*y^2)
+2*pi*(x)*(b-(x/a)^(1/2))
 3
 a 3
 b 1
@@ -49,7 +49,7 @@ c 0
 #
 Question 2.6
 with respect to
-dy
+dx
 0
 0
 #
@@ -73,9 +73,55 @@ c 0
 #
 Question 2.9
 x=args[0]*y^2 y=args[1] x=args[2]
-pi*pow(a,2)*(pow(b,4+1)/(4+1))-pow(pow(c/a,1/2),4+1)/(4+1) 2*pi*a*((pow(a*pow(b,2),3+1)/(3+1))-(b*pow(a*pow(b,2),2+1)/(2+1))-((pow(c,3+1)/(3+1))-(b*pow(c,2+1)/(2+1))))
+pi*pow(a,2)*(pow(b,4+1)/(4+1))-pow(pow(c/a,1/2),4+1)/(4+1) 2*pi*((b/2)*(pow(a*pow(b,2),2)-pow(c,2))-(1/a)^(1/2)*(2/5)*(pow(a*pow(b,2),5/2)-pow(c,5/2)))
 3
 a 3
 b 1
 c 0
+0
+#
+Question 3.1
+y=args[0]*x^3+args[1]*x from the point (args[2],args[3]) to the point (args[4],args[5])
+c
+6
+a 2
+b 16
+c -1
+d -18
+p 4
+q 192
+0
+#
+Question 3.2
+y=args[0]*x^3+args[1]*x from the point (args[2],args[3]) to the point (args[4],args[5])
+p
+6
+a 2
+b 16
+c -1
+d -18
+p 4
+q 192
+0
+#
+Question 3.3
+y=args[0]*x^3+args[1]*x from the point (args[2],args[3]) to the point (args[4],args[5])
+(1+(3*a*x^2+b)^(2))^(1/2)
+6
+a 2
+b 16
+c -1
+d -18
+p 4
+q 192
+0
+#
+Question 4
+y=args[0]*x^(3/2)+args[1] from x=args[2] to x=args[3]
+(4/(9*pow(a,2)))*2/3*((1+9*pow(a,2)/4*d)-(1+9*pow(a,2)/4*c))
+4
+a 5
+b 1
+c 4
+d 10
 0
