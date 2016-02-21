@@ -118,10 +118,20 @@ q 192
 #
 Question 4
 y=args[0]*x^(3/2)+args[1] from x=args[2] to x=args[3]
-(4/(9*pow(a,2)))*2/3*((1+9*pow(a,2)/4*d)-(1+9*pow(a,2)/4*c))
+(4/(9*pow(a,2)))*2/3*(pow(1+9*pow(a,2)/4*d,3/2)-pow(1+9*pow(a,2)/4*c,3/2))
 4
 a 5
 b 1
 c 4
 d 10
+0
+#
+Question 5
+x=args[0] and x=args[1] h(x)=args[2]*cosh(x*args[3])
+
+4
+a -10
+b 10
+c 8
+d 1/8
 0
