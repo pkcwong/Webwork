@@ -3,7 +3,7 @@
 The solution to online homework systems!
 
 #WAFFLE!!
-https://waffle.io/pkcwong/Webwork
+http://adf.ly/1XGrEm
 
 #log
 
