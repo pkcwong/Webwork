@@ -173,10 +173,18 @@ b 2
 #
 Question 8
 Find the area of the surface obtained by rotating the curve args[0]*x=y^2+args[1] about x-axis from x=args[2] to x=args[3]
-
+2*2*pi/a*2/3*((a*d+(a*a-4*b)/4)^(3/2)-(a*c+(a*a-4*b)/4)^(3/2))
 4
 a 25
 b 50
 c 2
 d 8
 0
+#
+Question 9
+The force on a particle is described by args[0]+args[1]*x^3 at a point x along the x-axis. Find the work done in moving the particle from the origin to x = args[2]
+2*a/3*((1+9*b*b*pow(c,4))^(3/2)-((1+9*b*b*pow(0,4))^(3/2)))+1/72/b*((1+9*b*b*pow(c,4))-(1+9*b*b*pow(0,4)))
+3
+a -1
+b 5
+c 5
