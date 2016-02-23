@@ -247,7 +247,7 @@ q (-(k)+pow(pow(k,2)-4*j*l,1/2))/2/j
 #
 Question 9
 args[0]*y=args[1]*x^(1/2) y=args[2] args[3]*y+args[4]*x=args[5]
-(pow(a*c/b,2)/3-r*c/q+2*p*pow(c,2)/q)-(pow(a*s/b,2)/3-r*s/q+2*p*pow(s,2)/q) abs((c-r/p)*B+q*pow(B,2)/2/p-(c-r/p)*A+q*pow(A,2)/2/p)+abs((c*C-2*b*pow(C,3/2)/3/a)-(c*B-2*b*pow(B,3/2)/3/a))
+abs(pow(a/b,2)*pow(c,3)/3-r*c/q+p*pow(c,2)/2/q)-(pow(a/b,2)*pow(s,3)/3-r*s/q+p*pow(s,2)/2/q) abs(((c-r/p)*B+q*pow(B,2)/2/p)-((c-r/p)*A+q*pow(A,2)/2/p))+abs((c*C-2*b*pow(C,3/2)/3/a)-(c*B-2*b*pow(B,3/2)/3/a))
 6
 a 2
 b 5
@@ -256,9 +256,9 @@ p 2
 q 2
 r 7
 4
-s (-b*b*p+pow(pow(b,4)*p*p-4*a*a*q*-b*b*r,1/2))/(2*a*a*q)
+s (-b*b*p+pow(pow(b,4)*p*p-4*a*a*q*(-b)*b*r,1/2))/(2*a*a*q)
 A (r-p*c)/q
-B pow((-b*q+pow(pow(b*p,2)-4*a*q*-a*r,1/2))/2/a/q,2)
+B pow((-b*q+pow(pow(b*p,2)-4*a*q*(-a)*r,1/2))/2/a/q,2)
 C pow(a*c/b,2)
 #
 Question 10.1
