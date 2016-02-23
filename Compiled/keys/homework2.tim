@@ -1,3 +1,4 @@
+﻿
 #
 Question 1
 Multiple Choices Question
@@ -173,7 +174,7 @@ b 2
 #
 Question 8
 Find the area of the surface obtained by rotating the curve args[0]*x=y^2+args[1] about x-axis from x=args[2] to x=args[3]
-2*2*pi/a*2/3*((a*d+(a*a-4*b)/4)^(3/2)-(a*c+(a*a-4*b)/4)^(3/2))
+2*pi/a*2/3*((a*d+(a*a-4*b)/4)^(3/2)-(a*c+(a*a-4*b)/4)^(3/2))
 4
 a 25
 b 50
@@ -183,8 +184,63 @@ d 8
 #
 Question 9
 The force on a particle is described by args[0]+args[1]*x^3 at a point x along the x-axis. Find the work done in moving the particle from the origin to x = args[2]
-2*a/3*((1+9*b*b*pow(c,4))^(3/2)-((1+9*b*b*pow(0,4))^(3/2)))+1/72/b*((1+9*b*b*pow(c,4))-(1+9*b*b*pow(0,4)))
+a*c+b/4*pow(c,4)
 3
 a -1
 b 5
 c 5
+0
+#
+Question 10
+A bucket of water of mass args[0] kg is pulled at constant velocity up to a platform args[1] meters above the ground. This takes args[2] minutes, during which time args[3] kg of water drips out at a steady rate through a hole in the bottom.
+9.8*b/c*(a*c-d/2/c*c*c)
+4
+a 15
+b 50
+c 16
+d 2
+0
+#
+Question 11
+If the radius of the cylinder is args[0] meters, its length is args[1] meters, and its top is args[2] meters under the ground
+pi*a*a*b*673*9.8*(a+c)
+3
+a 2.5
+b 2
+c 5
+0
+#
+Question 12
+on the interval [args[0],args[1]]
+1/(b-a)*(e^(-b^2)-e^(-a^2))
+2
+a 0
+b 9
+0
+#
+Question 13.1
+T(t) =  args[0] + args[1]*sin((pi*t/args[2])
+a
+3
+a 80
+b 11
+c 12
+0
+#
+Question 13.2
+T(t) =  args[0] + args[1]*sin((pi*t/args[2])
+a+b
+3
+a 80
+b 11
+c 12
+0
+#
+Question 13.3
+T(t) =  args[0] + args[1]*sin((pi*t/args[2])
+a+2*b/pi
+3
+a 80
+b 11
+c 12
+0
