@@ -245,9 +245,9 @@ l -bb-ac
 p (-(k)-pow(pow(k,2)-4*j*l,1/2))/2/j
 q (-(k)+pow(pow(k,2)-4*j*l,1/2))/2/j
 #
-Question 9 [Wrong Answer]
+Question 9
 args[0]*y=args[1]*x^(1/2) y=args[2] args[3]*y+args[4]*x=args[5]
-I_m-I_l-(I_s-I_m)-(I_r+I_s) ((c-r/q)*B+(p/2/q)*pow(B,2))-((c-r/q)*A+(p/2/q)*pow(A,2))+(c*C-(2*b/3/a)*pow(C,3/2))-(c*B-(2*b/3/a)*pow(B,3/2))
+(pow(a*c/b,2)/3-r*c/q+2*p*pow(c,2)/q)-(pow(a*s/b,2)/3-r*s/q+2*p*pow(s,2)/q) abs((c-r/p)*B+q*pow(B,2)/2/p-(c-r/p)*A+q*pow(A,2)/2/p)+abs((c*C-2*b*pow(C,3/2)/3/a)-(c*B-2*b*pow(B,3/2)/3/a))
 6
 a 2
 b 5
@@ -255,18 +255,10 @@ c 5
 p 2
 q 2
 r 7
-12
-m (-p+pow(pow(p,2)-4*(pow(a,2)*q/pow(b,2))*(-r),1/2))/(2*(pow(a,2)*q/pow(b,2)))
-s r/p
-I_l r/q*0-p/(2*q)*pow(0,2)-pow(a,2)/(3*pow(b,2))*pow(0,3)
-I_m r/q*m-p/(2*q)*pow(m,2)-pow(a,2)/(3*pow(b,2))*pow(m,3)
-I_s r/q*s-p/(2*q)*pow(s,2)-pow(a,2)/(3*pow(b,2))*pow(s,3)
-I_r r/q*c-p/(2*q)*pow(c,2)-pow(a,2)/(3*pow(b,2))*pow(c,3)
+4
+s (-b*b*p+pow(pow(b,4)*p*p-4*a*a*q*-b*b*r,1/2))/(2*a*a*q)
 A (r-p*c)/q
-j pow(a*q,2)
-k -(2*a*a*q*r+pow(b*p,2))
-l pow(a*r,2)
-B (-(k)-pow(pow(k,2)-4*j*l,1/2))/2/j
+B pow((-b*q+pow(pow(b*p,2)-4*a*q*-a*r,1/2))/2/a/q,2)
 C pow(a*c/b,2)
 #
 Question 10.1
