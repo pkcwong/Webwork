@@ -128,7 +128,7 @@ d 10
 #
 Question 5
 x=args[0] and x=args[1] h(x)=args[2]*cosh(x*args[3])
-
+c*((pow(e,b/c)-pow(e,-b/c))/2-(pow(e,a/c)-pow(e,-a/c))/2)
 4
 a -10
 b 10
