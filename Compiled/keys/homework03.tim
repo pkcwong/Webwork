@@ -1,0 +1,10 @@
+#
+Question 1
+integrate x^2*(args[0]*x+args[1])^(1/2) from args[2] to args[3]
+1/pow(a,3)*(((2/7)*pow(a*d+b,7/2)-2*b*2/5*pow(a*d+b,5/2)+b*b*2/3*pow(a*d+b,3/2))-((2/7)*pow(a*c+b,7/2)-2*b*2/5*pow(a*c+b,5/2)+b*b*2/3*pow(a*c+b,3/2)))
+4
+a 5
+b 8
+c 0
+d 1
+0
