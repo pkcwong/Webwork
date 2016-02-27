@@ -120,4 +120,33 @@ All that matters for Gauss's law is the total amount of charge enclosed by the s
 0
 #
 Question 22.17.A
-length=args[0]uC/m length=args[1]uC/m y1=args[2]m
+density=args[0]uC/m density=args[1]uC/m y1=args[2]m y2=args[3]m
+da*(pow(10,-6))/(2*pi*(yo-0)*epsilon)-db*(pow(10,-6))/(2*pi*(ya-yo)*epsilon)
+4
+da 4.60
+db -2.26
+ya 0.398
+yo 0.186
+0
+#
+Question 22.17.B
+MC Question
++y-axis
+0
+0
+#
+Question 22.17.C
+density=args[0]uC/m density=args[1]uC/m y1=args[2]m y2=args[3]m
+-(da*(pow(10,-6))/(2*pi*(yo-0)*epsilon)-db*(pow(10,-6))/(2*pi*(ya-yo)*epsilon))
+4
+da 4.60
+db -2.26
+ya 0.398
+yo 0.606
+0
+#
+Question 22.17.D
+MC Question
+-y-axis
+0
+0
