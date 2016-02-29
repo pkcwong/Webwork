@@ -199,7 +199,7 @@ public class Main {
 					for (int k = 0; k != sysVar.size(); k++) {
 						parts[i] = parts[i].replaceAll(sysVar.get(k), sysValue.get(k).toString());
 					}
-					Frame.writeHead(parts[i]);
+					Frame.writeHead("\t" + parts[i]);
 				}
 			}
 		} else {
