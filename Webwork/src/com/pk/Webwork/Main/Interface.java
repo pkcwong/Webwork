@@ -33,7 +33,7 @@ public class Interface extends JFrame {
 	private JSpinner num = new JSpinner();
 
 	public Interface() {
-		super("Webwork ver_0_4");
+		super("Webwork ver_0_5");
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		this.Head.setText("Output goes here");
 		this.Head.setEditable(false);

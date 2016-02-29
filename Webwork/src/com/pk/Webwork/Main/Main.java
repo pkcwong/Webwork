@@ -192,6 +192,14 @@ public class Main {
 				} else {
 					Frame.writeBody("[ERROR] See Parser");
 					Frame.writeHead(cal.errLog());
+					Frame.writeHead(">>> " + parts[i]);
+					for (int k = 0; k != var.size(); k++) {
+						parts[i] = parts[i].replaceAll(var.get(k), value.get(k).toString());
+					}
+					for (int k = 0; k != sysVar.size(); k++) {
+						parts[i] = parts[i].replaceAll(sysVar.get(k), sysValue.get(k).toString());
+					}
+					Frame.writeHead(parts[i]);
 				}
 			}
 		} else {
