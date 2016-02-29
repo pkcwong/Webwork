@@ -7,7 +7,7 @@ integrate 2*pi*(x-arg[0])*(sin(pi/2*x)-x^4) from 0 to 1
 #
 Question 2.1
 x=args[0]*y^2 y=args[1] x=args[2]
-pi*pow(a*pow(y,2),2)
+pi*(a*(y)^2)^2
 3
 a 3
 b 1
