@@ -1,0 +1,248 @@
+﻿#
+Question 1
+Multiple Choices Question
+integrate 2*pi*(x-arg[0])*(sin(pi/2*x)-x^4) from 0 to 1
+0
+0
+#
+Question 2.1
+x=args[0]*y^2 y=args[1] x=args[2]
+pi*(a*(y^2))^2
+3
+a 3
+b 1
+c 0
+0
+#
+Question 2.2
+with respect to
+dy
+0
+0
+#
+Question 2.3
+x=args[0]*y^2 y=args[1] x=args[2]
+pow(c/a,1/2)
+3
+a 3
+b 1
+c 0
+0
+#
+Question 2.4
+x=args[0]*y^2 y=args[1] x=args[2]
+b
+3
+a 3
+b 1
+c 0
+0
+#
+Question 2.5
+x=args[0]*y^2 y=args[1] x=args[2]
+2*pi*(x)*(b-(x/a)^(1/2))
+3
+a 3
+b 1
+c 0
+0
+#
+Question 2.6
+with respect to
+dx
+0
+0
+#
+Question 2.7
+x=args[0]*y^2 y=args[1] x=args[2]
+c
+3
+a 3
+b 1
+c 0
+0
+#
+Question 2.8
+x=args[0]*y^2 y=args[1] x=args[2]
+a*pow(b,2)
+3
+a 3
+b 1
+c 0
+0
+#
+Question 2.9
+x=args[0]*y^2 y=args[1] x=args[2]
+pi*pow(a,2)*(pow(b,4+1)/(4+1))-pow(pow(c/a,1/2),4+1)/(4+1) 2*pi*((b/2)*(pow(a*pow(b,2),2)-pow(c,2))-(1/a)^(1/2)*(2/5)*(pow(a*pow(b,2),5/2)-pow(c,5/2)))
+3
+a 3
+b 1
+c 0
+0
+#
+Question 3.1
+y=args[0]*x^args[1]+args[2]*x from the point (args[3],args[4]) to the point (args[5],args[6])
+c
+7
+a 2
+s 3
+b 16
+c -1
+d -18
+p 4
+q 192
+0
+#
+Question 3.2
+y=args[0]*x^args[1]+args[2]*x from the point (args[3],args[4]) to the point (args[5],args[6])
+p
+7
+a 2
+s 3
+b 16
+c -1
+d -18
+p 4
+q 192
+0
+#
+Question 3.3
+y=args[0]*x^args[1]+args[2]*x from the point (args[3],args[4]) to the point (args[5],args[6])
+(1+(s*a*x^(s-1)+b)^(2))^(1/2)
+6
+a 2
+s 3
+b 16
+c -1
+d -18
+p 4
+q 192
+0
+#
+Question 4
+y=args[0]*x^(3/2)+args[1] from x=args[2] to x=args[3]
+(4/(9*pow(a,2)))*2/3*(pow(1+9*pow(a,2)/4*d,3/2)-pow(1+9*pow(a,2)/4*c,3/2))
+4
+a 5
+b 1
+c 4
+d 10
+0
+#
+Question 5
+x=args[0] and x=args[1] h(x)=args[2]*cosh(x*args[3])
+c*((pow(e,b/c)-pow(e,-b/c))/2-(pow(e,a/c)-pow(e,-a/c))/2)
+4
+a -10
+b 10
+c 8
+d 1/8
+0
+#
+Question 6.1
+g(x)=args[0]*x*e^(-x) about the x-axis for args[]1≤x≤args[2]
+2*pi*(a*x*e^(-x))*(1+(-a*x*e^(-x)+a*e^(-x))^(2))^(1/2)
+3
+a 4
+b 1
+c 4
+0
+#
+Question 6.2
+g(x)=args[0]*x*e^(-x) about the x-axis for args[]1≤x≤args[2]
+b
+3
+a 4
+b 1
+c 4
+0
+#
+Question 6.3
+g(x)=args[0]*x*e^(-x) about the x-axis for args[]1≤x≤args[2]
+c
+3
+a 4
+b 1
+c 4
+0
+#
+Question 7
+Find the area of the surface obtained by rotating the curve y=x^(1/3) about y-axis for args[0]≤y≤args[1]
+pi/18*2/3*((1+9*b^4)^(3/2)-(1+9*a^4)^(3/2))
+2
+a 1
+b 2
+0
+#
+Question 8
+Find the area of the surface obtained by rotating the curve args[0]*x=y^2+args[1] about x-axis from x=args[2] to x=args[3]
+2*pi/a*2/3*(pow(a*d+(a*a-4*b)/4,3/2)-pow(a*c+(a*a-4*b)/4,3/2))
+4
+a 25
+b 50
+c 2
+d 8
+0
+#
+Question 9
+The force on a particle is described by args[0]+args[1]*x^3 at a point x along the x-axis. Find the work done in moving the particle from the origin to x = args[2]
+a*c+b/4*pow(c,4)
+3
+a -1
+b 5
+c 5
+0
+#
+Question 10
+A bucket of water of mass args[0] kg is pulled at constant velocity up to a platform args[1] meters above the ground. This takes args[2] minutes, during which time args[3] kg of water drips out at a steady rate through a hole in the bottom.
+9.8*b/c*(a*c-d/2/c*c*c)J
+4
+a 15
+b 50
+c 16
+d 2
+0
+#
+Question 11
+If the radius of the cylinder is args[0] meters, its length is args[1] meters, and its top is args[2] meters under the ground
+pi*a*a*b*673*9.8*(a+c)J
+3
+a 2.5
+b 2
+c 5
+0
+#
+Question 12
+on the interval [args[0],args[1]]
+1/(b-a)*(e^(-b^2)-e^(-a^2))
+2
+a 0
+b 9
+0
+#
+Question 13.1
+T(t) =  args[0] + args[1]*sin((pi*t/args[2])
+a
+3
+a 80
+b 11
+c 12
+0
+#
+Question 13.2
+T(t) =  args[0] + args[1]*sin((pi*t/args[2])
+a+b
+3
+a 80
+b 11
+c 12
+0
+#
+Question 13.3
+T(t) =  args[0] + args[1]*sin((pi*t/args[2])
+a+2*b/pi
+3
+a 80
+b 11
+c 12
+0
