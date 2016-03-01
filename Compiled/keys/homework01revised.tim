@@ -86,147 +86,147 @@ b -3
 #
 Question 8.1
 args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
--bb
+-m
 10
-aa 1
-ax 1
-ab 3
-ay 1
-ac 34
-ba 1
-bx 1
-bb 6
-bc 1
-by 2
+f 1
+g 1
+h 3
+i 1
+j 34
+k 1
+l 1
+m 6
+n 1
+o 2
 0
 #
 Question 8.2
 args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
 (-(q)-pow((pow(q,2)-4*(p)*(r)),1/2))/(2)/(p)
 10
-aa 1
-ax 1
-ab 3
-ay 1
-ac 34
-ba 1
-bx 1
-bb 6
-bc 1
-by 2
+f 1
+g 1
+h 3
+i 1
+j 34
+k 1
+l 1
+m 6
+n 1
+o 2
 3
-p pow(-aa,2)
-q 2*(ac)*(-aa)-pow(ab,2)
-r pow(ac,2)-pow(ab,2)*(bb)
+p pow(-f,2)
+q 2*(j)*(-f)-pow(h,2)
+r pow(j,2)-pow(h,2)*(m)
 #
 Question 8.3
 args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
 (-(q)+pow((pow(q,2)-4*(p)*(r)),1/2))/(2)/(p)
 10
-aa 1
-ax 1
-ab 3
-ay 1
-ac 34
-ba 1
-bx 1
-bb 6
-bc 1
-by 2
+f 1
+g 1
+h 3
+i 1
+j 34
+k 1
+l 1
+m 6
+n 1
+o 2
 3
-p pow(-aa,2)
-q 2*(ac)*(-aa)-pow(ab,2)
-r pow(ac,2)-pow(ab,2)*(bb)
+p pow(-f,2)
+q 2*(j)*(-f)-pow(h,2)
+r pow(j,2)-pow(h,2)*(m)
 #
 Question 8.4
 args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
-2*pow(x+bb,1/by)
+2*pow(x+m,1/o)
 10
-aa 1
-ax 1
-ab 3
-ay 1
-ac 34
-ba 1
-bx 1
-bb 6
-bc 1
-by 2
+f 1
+g 1
+h 3
+i 1
+j 34
+k 1
+l 1
+m 6
+n 1
+o 2
 0
 #
 Question 8.5
 args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
-(ac-x)/ab--pow(x+bb,1/by)
+(j-x)/h--pow(x+m,1/o)
 10
-aa 1
-ax 1
-ab 3
-ay 1
-ac 34
-ba 1
-bx 1
-bb 6
-bc 1
-by 2
+f 1
+g 1
+h 3
+i 1
+j 34
+k 1
+l 1
+m 6
+n 1
+o 2
 0
 #
 Question 8.6
 args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
 (-(k)-pow(pow(k,2)-4*j*l,1/2))/2/j
 10
-aa 1
-ax 1
-ab 3
-ay 1
-ac 34
-ba 1
-bx 1
-bb 6
-bc 1
-by 2
+f 1
+g 1
+h 3
+i 1
+j 34
+k 1
+l 1
+m 6
+n 1
+o 2
 3
-j bc
-k ab
-l -bb-ac
+j n
+k h
+l -m-j
 #
 Question 8.7
 args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
 (-(k)+pow(pow(k,2)-4*j*l,1/2))/2/j
 10
-aa 1
-ax 1
-ab 3
-ay 1
-ac 34
-ba 1
-bx 1
-bb 6
-bc 1
-by 2
+f 1
+g 1
+h 3
+i 1
+j 34
+k 1
+l 1
+m 6
+n 1
+o 2
 3
-j bc
-k ab
-l -bb-ac
+j n
+k h
+l -m-j
 #
 Question 8.8
 args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
-ac-(ab)*pow(y,ay)-((bc)*pow(y,by)-bb)
+j-(h)*pow(y,i)-((n)*pow(y,o)-m)
 10
-aa 1
-ax 1
-ab 3
-ay 1
-ac 34
-ba 1
-bx 1
-bb 6
-bc 1
-by 2
+f 1
+g 1
+h 3
+i 1
+j 34
+k 1
+l 1
+m 6
+n 1
+o 2
 0
 #
 Question 8.9
 args[0]*x^args[1]+args[2]*y^args[3]=args[4] args[5]*x^args[6]+args[7]=args[8]*y^args[9]
-((ac+bb)*(q)-(ab)*pow(q,ay+1)/(ay+1)-(bc)*pow(q,by+1)/(by+1))-((ac+bb)*(p)-(ab)*pow(p,ay+1)/(ay+1)-(bc)*pow(p,by+1)/(by+1))
+((j+m)*(q)-(h)*pow(q,i+1)/(i+1)-(n)*pow(q,o+1)/(o+1))-((j+m)*(p)-(h)*pow(p,i+1)/(i+1)-(n)*pow(p,o+1)/(o+1))
 10
 aa 1
 ax 1
@@ -239,9 +239,9 @@ bb 6
 bc 1
 by 2
 5
-j bc
-k ab
-l -bb-ac
+j n
+k h
+l -m-j
 p (-(k)-pow(pow(k,2)-4*j*l,1/2))/2/j
 q (-(k)+pow(pow(k,2)-4*j*l,1/2))/2/j
 #
@@ -279,7 +279,7 @@ b 16
 #
 Question 10.3
 y=f(x)=args[0] y=g(x)=args[1]
-a-b*pow(x,2)
+a-b*(x^2)
 2
 a 9
 b 16
@@ -287,7 +287,7 @@ b 16
 #
 Question 10.4
 y=f(x)=args[0] y=g(x)=args[1]
-(a-b*pow(x,2))^2
+(a-b*(x^2))^2
 2
 a 9
 b 16
@@ -319,14 +319,14 @@ a 15
 #
 Question 11.3
 The base of a certain solid is an equilateral triangle with altitude args[0]
-pow(4*pow(x,2)/3,1/2)
+(4*(x^2)/3)^(1/2)
 1
 a 15
 0
 #
 Question 11.4
 The base of a certain solid is an equilateral triangle with altitude args[0]
-pi*pow(pow(4*pow(x,2)/3,1/2)/2,2)/2
+pi*((4*(x^2)/3)^(1/2)/2)^(2)/2
 1
 a 15
 0
@@ -353,19 +353,19 @@ an annulus with inner radius sin(args[0]*y) and outer radius cos(args[1]*y)
 0
 #
 Question 12.3 The result of rotating the line about the line y=1 is 
-x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). 
+x=f(y)=sin(args[0]*y) and x=g(y)=cos(args[1]*y). 
 a cylinder of radius 1-y and height cos(args[1]*y)-sin(args[0]*y)
 0
 0
 #
 Question 12.4 The result of rotating the line about the line x=-2 is 
-x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). 
+x=f(y)=sin(args[0]*y) and x=g(y)=cos(args[1]*y). 
 an annulus with inner radius 2+sin(args[0]*y) and outer radius 2+cos(args[1]*y) 
 0
 0
 #
 Question 12.5 The result of rotating the line about the line x=pi is 
-x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). 
+x=f(y)=sin(args[0]*y) and x=g(y)=cos(args[1]*y). 
 an annulus with inner radius pi-cos(args[1]*y) and outer radius pi-sin(args[0]*y) is 
 0
 0
