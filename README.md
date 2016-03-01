@@ -7,6 +7,8 @@ http://adf.ly/1XGrEm
 
 #log
 
+2016/02/27 - Created ver_0_4
+
 2016/02/13 - Created ver_0_3
 
 2016/02/08 - Created ver_0_2
