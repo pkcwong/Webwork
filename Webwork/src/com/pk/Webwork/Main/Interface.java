@@ -144,12 +144,12 @@ public class Interface extends JFrame {
 		fc.showOpenDialog(this);
 		if (Main.setFile(fc.getSelectedFile())) {
 			SpinnerNumberModel model = new SpinnerNumberModel(1, 1, Main.getNumRecords(), 1);
-			num.setModel(model);
+			this.num.setModel(model);
 		} else {
 			SpinnerNumberModel model = new SpinnerNumberModel(0, 0, 0, 1);
-			num.setModel(model);
+			this.num.setModel(model);
 		}
-		JFormattedTextField tf = ((JSpinner.DefaultEditor) num.getEditor()).getTextField();
+		JFormattedTextField tf = ((JSpinner.DefaultEditor) this.num.getEditor()).getTextField();
 		tf.setEditable(false);
 	}
 
