@@ -266,35 +266,35 @@ Question 11.1
 The base of a certain solid is an equilateral triangle with altitude args[0]
 0
 1
-a 15
+a 14
 0
 #
 Question 11.2
 The base of a certain solid is an equilateral triangle with altitude args[0]
 a
 1
-a 15
+a 14
 0
 #
 Question 11.3
 The base of a certain solid is an equilateral triangle with altitude args[0]
 (4*(x^2)/3)^(1/2)
 1
-a 15
+a 14
 0
 #
 Question 11.4
 The base of a certain solid is an equilateral triangle with altitude args[0]
 pi*((4*(x^2)/3)^(1/2)/2)^(2)/2
 1
-a 15
+a 14
 0
 #
 Question 11.5
 The base of a certain solid is an equilateral triangle with altitude args[0]
 pi/18*(pow(B,3))-pi/18*(pow(A,3))
 1
-a 15
+a 14
 2
 A 0
 B a
@@ -375,11 +375,10 @@ f 0.6
 0
 #
 Question 14
-y=args[0]x^args[1] and y=args[2]x is rotated around the line y=args[3]. 
-pi*((pow(j,2)*pow(B,2*k+1)/(2*k+1)-2*j*q*pow(B,k+1)/(k+1)+pow(q,2)*B)-(pow(r,2)*pow(B,3)/3-2*r*q*pow(B,2)/2+pow(q,2)*B))
-4
+y=args[0]*x^2 and y=args[1]*x is rotated around the line y=args[2]. 
+pi*((pow(j,2)*pow(B,2*2+1)/(2*2+1)-2*j*q*pow(B,2+1)/(2+1)+pow(q,2)*B)-(pow(r,2)*pow(B,3)/3-2*r*q*pow(B,2)/2+pow(q,2)*B))
+3
 j 1
-k 2
 r 5
 q 25
 2
@@ -399,45 +398,41 @@ P a
 Q c
 #
 Question 16.1
-args[0]*x=args[1]*y y^args[2]=x
-pi*((b/a*y)^(2)-(y^(c))^(2))
-3
+args[0]*x=args[1]*y y^3=x
+pi*((b/a*y)^(2)-(y^(3))^(2))
+2
 a 1
 b 9
-c 3
 3
 P 0
-R pow(b,c/2)/b
+R pow(b,3/2)/b
 #
 Question 16.2
-args[0]*x=args[1]*y y^args[2]=x
+args[0]*x=args[1]*y y^3=x
 dy
-3
+2
 a 1
 b 9
-c 3
 3
 P 0
-R pow(b,c/2)/b
+R pow(b,3/2)/b
 #
 Question 16.3
-args[0]*x=args[1]*y y^args[2]=x
+args[0]*x=args[1]*y y^3=x
 P
-3
+2
 a 1
 b 9
-c 3
 3
 P 0
-R pow(b,c/2)/b
+R pow(b,3/2)/b
 #
 Question 16.4
-args[0]*x=args[1]*y y^args[2]=x
+args[0]*x=args[1]*y y^3=x
 R
-3
+2
 a 1
 b 9
-c 3
 3
 P 0
-R pow(b,c/2)/b
+R pow(b,3/2)/b
