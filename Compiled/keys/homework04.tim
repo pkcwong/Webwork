@@ -1,0 +1,197 @@
+#
+Question 1
+integrate sin(args[0]*x)^(args[1])*cos(args[0]*x)^(args[2])
+1/f*(-cos(f*x)^(h+1)/(h+1)+cos(f*x)^(g+h)/(g+h))
+3
+f 17
+g 3
+h 10
+0
+#
+Question 2
+integrate tan(x)^(args[0])*sec(x)^2
+tan(x)^(f+1)/(f+1)
+1
+f 6
+0
+#
+Question 3
+integrate sin(2*x)*sin(x) from args[0] to pi/args[1]
+2(sin(g)^(3)/3-sin(f)^(3)/3)
+2
+f 0
+g 5
+#
+Question 4.1
+integrate (args[0]*x^2+args[1])^(3/2)
+(b/a)^(1/2)*sec(t)
+2
+a 7
+b -8
+0
+#
+Question 4.2
+integrate x^(2)/(args[0]*x^(2)+args[1])^(1/2)
+(c/b)^(1/2)*tan(t)
+2
+b 4
+c 5
+0
+#
+Question 4.3
+integrate x*(args[0]*x^(2)+args[1]*x+args[2])^(1/2)
+sec(t)*(abs((h-(g)^(2)/4/f)/f))^(1/2)+(-g/2/f)
+3
+f 5
+g -40
+h 75
+0
+#
+Question 4.4
+integrate x/(args[0]+args[1]*x^(2)+args[2]*x)^(1/2)
+sin(t)*(abs((f-(h)^(2)/4/g)/g))^(1/2)+(-h/2/g)
+3
+f -13
+g -5
+h 20
+0
+#
+Question 5
+integrate 1/(x^(2)*(args[0]-x^(2))^(1/2))
+-(f-x^(2))^(1/2)/x/f
+1
+f 225
+0
+#
+Question 6
+integrate args[0]/(x^(2)*(args[1]*x^(2)-args[2])^(1/2))
+f*(g)^(1/2)/h*(1-h/g/x^(2))^(1/2)
+3
+f 178
+g 9
+h 400
+0
+#
+Question 7
+q*arcsin((x-t)/l)
+4
+q 86
+f 72
+g -6
+h -1
+2
+l (abs((f-(g)^(2)/4/h)/h))^(1/2)
+t (-g/2/h)
+#
+Question 8.1
+True or False
+F
+0
+0
+#
+Question 8.2
+True or False
+F
+0
+0
+#
+Question 8.3
+True or False
+T
+0
+0
+#
+Question 8.4
+True or False
+T
+0
+0
+#
+Question 8.5
+True or False
+T
+0
+0
+#
+Question 8.6
+True or False
+F
+0
+0
+#
+Question 9.A
+1≤r≤2 
+A hollow circle
+0
+0
+#
+Question 9.B
+r≥0,π/3≤θ≤2π/3 
+an inverted triangle on the top, touching origin
+0
+0
+#
+Question 9.C
+0≤r<4,−π/2≤θ<π/6 
+a pie on the right side, touching the origin
+0
+0
+#
+Question 9.D
+2<r≤5,3π/4<θ<5π/4 
+an arc on the left side
+0
+0
+#
+Question 9.E
+2<r<3,5π/3≤θ≤7π/3 
+an arc on the right side
+0
+0
+#
+Question 9.F
+−1≤r≤1,π/4≤θ≤3π/4
+two red quarter-pie on top and down, with the origin as the centre
+0
+0
+#
+Question 10.A
+r2=4cos(2θ) 
+horizontal infinity sign
+0
+0
+#
+Question 10.B
+r2=sin(2θ) 
+an infinity sign with the heads pointing North-East and South-West
+0
+0
+#
+Question 10.C
+r=2cos(3θ/2) 
+
+0
+0
+#
+Question 10.D
+r2θ=1 
+typhoon like
+0
+0
+#
+Question 10.E
+r=1+2cos(2θ) 
+two infinity sign, one big horizontal and one small vertical
+0
+0
+#
+Question 10.F
+r=1+2cos(θ/2)
+
+0
+0
+#
+Question 11
+Graph 1
+0
+0
