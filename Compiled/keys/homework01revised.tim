@@ -340,7 +340,7 @@ z 2
 0
 #
 Question 12.6 The result of rotating the line about the line y=-2 is 
-x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). 
+x=f(y)=sin(args[0]*y) and x=g(y)=cos(args[1]*y). 
 a cylinder of radius 2+y and height cos(z*y)-sin(q*y)
 2
 q 1
@@ -348,7 +348,7 @@ z 2
 0
 #
 Question 12.7 The result of rotating the line about the line y=pi 
-x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). 
+x=f(y)=sin(args[0]*y) and x=g(y)=cos(args[1]*y). 
 a cylinder of radius pi-y and height cos(z*y)-sin(q*y)
 2
 q 1
@@ -356,7 +356,7 @@ z 2
 0
 #
 Question 12.8 The result of rotating the line about the line y=-pi
-x=f(y)=sin(args[0]y) and x=g(y)=cos(args[1]y). 
+x=f(y)=sin(args[0]*y) and x=g(y)=cos(args[1]*y). 
 a cylinder of radius pi+y and height cos(z*y)-sin(q*y)
 2
 q 1
@@ -364,7 +364,7 @@ z 2
 0
 #
 Question 13
-y=e^{args[0]x}+args[1] y=args[2] x=args[3] x=args[4]
+y=e^{args[0]*x}+args[1] y=args[2] x=args[3] x=args[4]
 pi*(pow(e,2*a*f)/2/a+2*b*pow(e,a*f)/a+pow(b,2)*f-c*f)-pi*(pow(e,2*a*d)/2/a+2*b*pow(e,a*d)/a+pow(b,2)*d-c*d)
 5
 a 5
