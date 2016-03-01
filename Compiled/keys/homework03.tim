@@ -93,10 +93,10 @@ b 7
 #
 Question 9
 integrate args[0]*x*sec(args[1]*x)^2
-b/a/a*(a*x*tan(a*x)+ln(abs(cos(a*x))))
+b/d/d*(d*x*tan(d*x)+ln(abs(cos(d*x))))
 2
 b 1
-a 4
+d 4
 0
 #
 Question 10
