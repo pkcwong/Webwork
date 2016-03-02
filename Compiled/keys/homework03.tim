@@ -74,7 +74,7 @@ substitution
 #
 Question 7
 g(args[0])=args[1] g(args[2])=args[3] integrate g(x) from args[0] to args[2] = args[4]
-c*d-b*a+g
+c*d-b*a-g
 5
 a 1
 b 5
