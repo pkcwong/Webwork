@@ -1,14 +1,14 @@
 #
 Question 1
-Find the area of the region bounded by the curves x=y^2-args[0]*y and x=args[0]*y-y^2
-abs((2*pow(f,3)/3-2*pow(f,3)/2)-(2*pow(0,3)/3-2*pow(0,3)/2)) abs((2*(f)^(3)/3-2*(f)^(3)/2)-(2*(0)^(3)/3-2*(0)^(3)/2))
+Find the area of the region bounded by the curves x=y^2-args[0] and x=args[0]-y^2
+4*pow(f,3/2)/3-4*pow(f,3/2)
 1
 f 2
 0
 #
 Question 2
 Find the volume of the solid whose base is the region bounded by y=x^args[0], y=args[1] and the y-axis/(x=args[2]) adn whose cross-section perpendicular to the x axis are squares.
-(pow(1,2)*g-2*1*pow(g,f+1)/(f+1)+pow(g,2*f+1)/(2*f+1))-(pow(1,2)*h-2*1*pow(h,f+1)/(f+1)+pow(h,2*f+1)/(2*f+1)) (1^(2)*g-2*1*g^(f+1)/(f+1)+g^(2*f+1)/(2*f+1))-(1^(2)*h-2*1*h^(f+1)/(f+1)+h^(2*f+1)/(2*f+1))
+pow(g,2+1/f)-2*pow(g,2+1/f)/(f+1)+pow(k,2+1/f)/(2*f+1)
 3
 f 4
 g 16
