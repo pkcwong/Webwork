@@ -86,7 +86,9 @@ substitution
 #
 Question 6
 A args[0]-ft chain weighs args[1]lb 
-f/2*g
+j*(f*f/2-2*pow(f/2,2)/2)
 2
 f 10
 g 25
+1
+j g/f
