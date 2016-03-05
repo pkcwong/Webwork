@@ -30,6 +30,32 @@ h 3
 1
 g 9.8
 #
+Question 4.1
+h(x)=x^2, f(args[0])=args[1], f'(args[0])=args[2], f''(args[0])=args[3], f(args[4])=args[5], f'(args[4])=args[6], f''(args[4])=args[7]
+(w*r*r-h*q*q)-2*((v*r-g*q)-(u-f))
+8
+q 2
+f 2
+g 4
+h 3
+r 10
+u 11
+v 8
+w 0
+0
+#
+Question 4.2
+h(args[0])=args[1] h(args[2])=args[3] h'(args[0])=args[4] h'(args[2])=args[5]
+(w*u-h*f)-(v-g)
+6
+f 1
+g 4
+u 20
+v 1
+h 5
+w 3
+0
+#
 Question 5.1
 integrate x*(sec(x))^(2)
 integration by part
