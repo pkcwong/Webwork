@@ -1,7 +1,7 @@
 #
 Question 5
 Find the slope of the tangent line to the polar curve r=sin(args[0]*θ) at θ=π/args[1].
-(-r*t+u*s)/(r*u+t*s)
+(r*u+t*s)/(-r*t+u*s)
 2
 f 6
 g 12
