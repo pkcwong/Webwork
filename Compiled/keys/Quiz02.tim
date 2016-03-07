@@ -11,7 +11,7 @@ c 5
 #
 Question 2
 A trough is args[0] meters long, args[1] meters wide, and args[2] meters deep. isosceles triangle(with height args[3] meters) Density args[4]kg/m^3 g=args[5]
-h*j/2*f*l*g*(j/3+k)
+h*k/2*f*l*g*(j/3+k)
 6
 f 30
 h 6
