@@ -1,5 +1,5 @@
 #
-Question 5
+Question 1
 Find the slope of the tangent line to the polar curve r=sin(args[0]*θ) at θ=π/args[1].
 (r*u+t*s)/(-r*t+u*s)
 2
@@ -10,3 +10,27 @@ r sin(f*pi/g)
 s f*cos(f*pi/g)
 t sin(pi/g)
 u cos(pi/g)
+#
+Question 2
+Find the area of the region that is bounded by the curve r=e^{theta/args[0]} and lies in the sector π ≤ θ ≤ 2π.
+abs(-f/2/2*(e^(2/f*2*pi)-e^(2/f*pi)))
+1
+f 3
+0
+#
+Question 3
+Find the area of the region bounded by r^2=args[0]*cos(2θ)
+2*f/2/2*(sin(2*3*pi/4)-sin(2*pi/4)))
+1
+f 200
+0
+#
+Question 4
+Find the area lying outside r=args[0]*sin(θ) and inside r=args[1]+args[2]*sin(θ).
+2*abs(2*(f*f/4*(pi/2*3-pi/2)+(f*f/2*((-cos(pi/2*3))-(-cos(pi/2))))+(f*f/4-f*f)/2*((pi/2*3-sin(2*pi/2*3)/2)-(pi/2-sin(2*pi/2)/2))))
+3
+k 6
+g 3
+h 3
+1
+f k
