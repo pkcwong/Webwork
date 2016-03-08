@@ -1,9 +1,9 @@
 #Webwork
+The solution to online homework systems!
+
 http://ihome.ust.hk/~pkcwongab/
 
 Support this project by following this link! http://adf.ly/1XGyoK
-
-The solution to online homework systems!
 
 #WAFFLE!!
 http://adf.ly/1XGrEm
