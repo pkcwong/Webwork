@@ -35,11 +35,17 @@ h 3
 0
 #
 Question 5
-
+A/(x+args[0])+B/(x+args[1])+C/(x+args[2])
+ln(abs(x+A))+ln(abs(x+B))+ln(abs(x+D))+C
+3
+A -3
+B 1
+D -1
+0
 #
 Question 6
 integrate args[0]*e^(x)/(e^(x)+args[1])/(e^(x)+args[2])
-A*P*ln(abs(e^(x)+H))+A*Q*ln(abs(e^(x)+H-H))+B*R*ln(abs(e^(x)+K))+B*S*ln(abs(e^(x)+K-K))+C
+N*(1-1/(1-(H/K)))*-1/H*ln(abs(e^(x)+H))+N*(1-1/(1-(H/K)))*1/H*ln(abs(e^(x)+H-H))+N/(1-H/K)*-1/K*ln(abs(e^(x)+K))+N/(1-H/K)*1/K*ln(abs(e^(x)+K-K))+C
 3
 N 1
 H -4
@@ -51,3 +57,14 @@ P -1/H
 Q 1/H
 R -1/K
 S 1/K
+#
+Question 7
+integrate args[0]/(args[1]*x^(2)+args[2]*x+args[3])^(2)
+f*(1/(u-h*h/4/g))*(1/(g/(u-h*h/4/g))^(1/2))/2*(arctan((g/(u-h*h/4/g))^(1/2)*(x+h/2/g))+1/2*sin(2*arctan((g/(u-h*h/4/g))^(1/2)*(x+h/2/g))))+C
+(g/(u-h*h/4/g))^(1/2)*(x+h/2/g)
+4
+f 4
+g 1
+h 2
+u 2
+0
