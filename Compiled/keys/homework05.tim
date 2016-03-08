@@ -20,7 +20,7 @@ f 3
 #
 Question 3
 Find the area of the region bounded by r^2=args[0]*cos(2θ)
-2*f/2/2*(sin(2*3*pi/4)-sin(2*pi/4)))
+2*f/2/2*(sin(2*3*pi/4)-sin(2*pi/4))
 1
 f 200
 0
