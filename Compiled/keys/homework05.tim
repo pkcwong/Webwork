@@ -27,7 +27,7 @@ f 200
 #
 Question 4
 Find the area lying outside r=args[0]*sin(θ) and inside r=args[1]+args[2]*sin(θ).
-2*abs(1/2*g*g*(pi/2*3-pi/2)+2*g*h/2*((-cos(pi/2*3))-(-cos(pi/2)))+1/2*(h*h-f*f)*(((pi/2*3)-(1/2*sin(2*pi/2*3)))-((pi/2)-(1/2*sin(2*pi/2)))))
+2*abs(1/2*g*g*(pi/2*3-pi/2)+2*g*h/2*((-cos(pi/2*3))-(-cos(pi/2)))+1/2/2*(h*h-f*f)*(((pi/2*3)-(1/2*sin(2*pi/2*3)))-((pi/2)-(1/2*sin(2*pi/2)))))
 3
 f 6
 g 3
