@@ -33,3 +33,21 @@ f 6
 g 3
 h 3
 0
+#
+Question 5
+
+#
+Question 6
+integrate args[0]*e^(x)/(e^(x)+args[1])/(e^(x)+args[2])
+A*P*ln(abs(e^(x)+H))+A*Q*ln(abs(e^(x)+H-H))+B*R*ln(abs(e^(x)+K))+B*S*ln(abs(e^(x)+K-K))+C
+3
+N 1
+H -4
+K 2
+6
+A N*(1-1/(1-(H/K)))
+B N/(1-H/K)
+P -1/H
+Q 1/H
+R -1/K
+S 1/K
