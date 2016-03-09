@@ -20,7 +20,7 @@ f 3
 #
 Question 3
 Find the area of the region bounded by r^2=args[0]*cos(2θ)
-2*f/2/2*(sin(2*3*pi/4)-sin(2*pi/4))
+abs(2*f/2/2*(sin(2*3*pi/4)-sin(2*pi/4)))
 1
 f 200
 0
@@ -61,7 +61,6 @@ S 1/K
 Question 7
 integrate args[0]/(args[1]*x^(2)+args[2]*x+args[3])^(2)
 f*(1/(u-h*h/4/g))*(1/(g/(u-h*h/4/g))^(1/2))/2*(arctan((g/(u-h*h/4/g))^(1/2)*(x+h/2/g))+1/2*sin(2*arctan((g/(u-h*h/4/g))^(1/2)*(x+h/2/g))))+C
-(g/(u-h*h/4/g))^(1/2)*(x+h/2/g)
 4
 f 4
 g 1
