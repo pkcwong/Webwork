@@ -68,3 +68,49 @@ g 1
 h 2
 u 2
 0
+#
+Question 8.1
+n = args[0] integrate sin(x^(2)) from args[1] to args[2] with Trapezoidal Rule
+(g-f)/n*(sin((h*0)^(2))+2*sin((h*1)^(2))+2*sin((h*2)^(2))+2*sin((h*3)^(2))+sin((h*4)^(2)))/2
+3
+n 4
+f 0
+g 1
+1
+h (g-f)/n
+#
+Question 8.2
+n = args[0] integrate sin(x^(2)) from args[1] to args[2] with Midpoint Rule
+(g-f)/n*(sin(((h*0+h*1)/2)^(2))+sin(((h*1+h*2)/2)^(2))+sin(((h*2+h*3)/2)^(2))+sin(((h*3+h*4)/2)^(2)))
+3
+n 4
+f 0
+g 1
+1
+h (g-f)/n
+#
+Question 8.3
+n = args[0] integrate sin(x^(2)) from args[1] to args[2] with Simpson's Rule
+(g-f)/(3*n)*(sin((h*0)^(2))+4*sin((h*1)^(2))+2*sin((h*2)^(2))+4*sin((h*3)^(2))+sin((h*4)^(2)))
+3
+n 4
+f 0
+g 1
+1
+h (g-f)/n
+#
+Question 9.1 Does T(args[0]) 
+overestimate or underestimate the exact value?
+overestimates
+0
+0
+#
+Question 9.2
+T(args[0]) of integrate args[1]*e^(pi/args[2]) from args[3] to args[4]
+(f/g/g*e^(j/g))*(k-j)^(3)/(12*(T)^(2))
+5
+T 20
+f 2
+g -4
+j 0
+k 4
