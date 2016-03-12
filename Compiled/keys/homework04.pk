@@ -1,0 +1,23 @@
+#
+Question 1
+integrate sin(args[0]*x)^(args[1])*cos(args[0]*x)^(args[2])
+1/f*(-cos(f*x)^(h+1)/(h+1)+cos(f*x)^(g+h)/(g+h))
+3
+f 17
+g 3
+h 10
+0
+#
+Question 2
+integrate tan(x)^(args[0])*sec(x)^2
+tan(x)^(f+1)/(f+1)
+1
+f 6
+0
+#
+Question 3
+integrate sin(2*x)*sin(x) from args[0] to args[1]
+2/3*pow(sin(A),3)
+1
+A pi/2
+0
