@@ -24,7 +24,7 @@ g 5
 #
 Question 4.1
 integrate (args[0]*x^2+args[1])^(3/2)
-(b/a)^(1/2)*sec(t)
+abs((b/a))^(1/2)*sec(t)
 2
 a 7
 b -8
