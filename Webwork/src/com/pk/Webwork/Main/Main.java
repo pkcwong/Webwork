@@ -20,6 +20,7 @@ public class Main {
 	private static ArrayList<String> sysVar = new ArrayList<String>();
 	private static ArrayList<String> sysValue = new ArrayList<String>();
 	public static String expression;
+	public static String lastAns;
 
 	public static void main(String[] args) {
 		Frame = new Interface();
@@ -189,6 +190,7 @@ public class Main {
 				if (cal.validate()) {
 					Frame.writeBody("Success");
 					Frame.writeHead("\t" + cal.evaluate());
+					lastAns = new Double(cal.evaluate()).toString();
 				} else {
 					Frame.writeBody("[ERROR] See Parser");
 					Frame.writeHead(cal.errLog());
@@ -200,12 +202,14 @@ public class Main {
 						parts[i] = parts[i].replaceAll(sysVar.get(k), sysValue.get(k).toString());
 					}
 					Frame.writeHead("\t" + parts[i]);
+					lastAns = parts[i];
 				}
 			}
 		} else {
 			Frame.writeBody("Nothing to compute");
 			Frame.writeHead(">>> " + expression);
 			Frame.writeHead("\t" + expression);
+			lastAns = expression;
 		}
 	}
 

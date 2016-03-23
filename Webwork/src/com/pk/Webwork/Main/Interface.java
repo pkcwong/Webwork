@@ -18,6 +18,8 @@ import javax.swing.JTextArea;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.WindowConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.datatransfer.*;
+import java.awt.Toolkit;
 
 public class Interface extends JFrame {
 
@@ -30,10 +32,11 @@ public class Interface extends JFrame {
 	public JTextArea Input = new JTextArea(12, 10);
 	private JButton load = new JButton("Load");
 	private JButton refresh = new JButton("Refresh");
+	private JButton clipboard = new JButton("Copy Answer");
 	private JSpinner num = new JSpinner();
 
 	public Interface() {
-		super("Webwork ver_1_0");
+		super("Webwork ver_1_1");
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		this.Head.setText("Output goes here");
 		this.Head.setEditable(false);
@@ -49,6 +52,14 @@ public class Interface extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				writeBody("Execute 'refresh'");
 				refresh();
+			}
+		});
+		this.clipboard.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String ans = Main.lastAns;
+				StringSelection stringSelection = new StringSelection(ans);
+				Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
+				clpbrd.setContents(stringSelection, null);
 			}
 		});
 		SpinnerNumberModel model = new SpinnerNumberModel(0, 0, 0, 1);
@@ -105,6 +116,7 @@ public class Interface extends JFrame {
 		JScrollPane scr_h = new JScrollPane(this.Head);
 		this.Panel.add(scr_h, this.grid(0, 1, 2, 2));
 		this.Panel.add(this.Body_t, this.grid(0, 3, 1, 1));
+		this.Panel.add(this.clipboard, this.grid(1, 3, 1, 1));
 		JScrollPane scr_b = new JScrollPane(this.Body);
 		this.Panel.add(scr_b, this.grid(0, 4, 2, 2));
 		this.Panel.add(this.Input_t, this.grid(2, 0, 1, 1));
@@ -136,9 +148,9 @@ public class Interface extends JFrame {
 
 	private void loader() {
 		JFileChooser fc = new JFileChooser();
-		FileNameExtensionFilter filter=new FileNameExtensionFilter("Answer Keys (*.pk *.tim)", "pk", "tim");
+		FileNameExtensionFilter filter = new FileNameExtensionFilter("Answer Keys (*.pk *.tim)", "pk", "tim");
 		fc.setFileFilter(filter);
-		if (Main.key!=null) {
+		if (Main.key != null) {
 			fc.setCurrentDirectory(Main.key.getParentFile());
 		}
 		fc.showOpenDialog(this);
