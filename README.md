@@ -3,7 +3,7 @@ The solution to online homework systems!
 
 http://ihome.ust.hk/~pkcwongab/webwork/
 
-Support this project by following this link! http://adf.ly/1XGpCX
+Support this project by following this link! http://adf.ly/1YyPgV
 
 #WAFFLE!!
 http://adf.ly/1XGrEm
