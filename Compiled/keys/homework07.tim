@@ -49,3 +49,144 @@ f 4
 g 2
 h 2
 0
+#
+Question 4
+integrate args[0]*(z^2)*ln(z) from 0 to args[1]
+f((ln(g)*(g^3)/3)-(g^3)/9)
+2
+f 4
+g 2
+0
+#
+Question 5.1
+Is the area between g(x) and j(x) from x=1 to infinity finite or infinite? 
+infinite
+0
+0
+#
+Question 5.2
+Does the integral of f(x) from x=1 to infinity converge? 
+converge
+0
+0
+#
+Question 5.3
+Does the integral of h(x) from x=1 to infinity converge? 
+it is impossible to tell
+0
+0
+#
+Question 5.4
+Does the integral of k(x) from x=1 to infinity converge? 
+diverge
+0
+0
+#
+Question 5.5
+Does the integral of p(x) from x=1 to infinity converge? 
+converge
+0
+0
+#
+Question 5.6
+Does the integral of q(x) from x=1 to infinity converge? 
+diverge
+0
+0
+#
+Question 6.1
+ingrate 1/(e^(args[0])+n) from 1 to infinity
+1/e^(f*x)
+1
+f 3
+0
+#
+Question 6.2
+so we predict the integral
+converges
+0
+0
+#
+Question 6.3
+ingrate e^(args[0])/(e^(args[1])+n) from 1 to infinity
+1/e^((g-f)*x)
+2
+f 3
+g 4
+0
+#
+Question 6.4
+so we predict the integral
+converges
+0
+0
+#
+Question 6.5
+ingrate x^(args[0])/(x^(args[1])+n) from 1 to infinity
+x^(g-f)
+2
+f 1
+g 1
+0
+#
+Question 6.6
+so we predict the integral
+diverges
+0
+0
+#
+Question 6.7
+ingrate x^(args[0])/(x^(args[1])+x^(args[2])+n) from 1 to infinity
+1/x^(g-f)
+3
+f 1
+g 4
+h 3
+0
+#
+Question 6.8
+so we predict the integral
+converges
+0
+0
+#
+Question 7.1 (In random order)
+integrate 1/((x^2)+n)
+AJ
+0
+0
+#
+Question 7.2 (In random order)
+integrate (cos(x))^(2)/((x^2)+n)
+AJ
+0
+0
+#
+Question 7.3 (In random order)
+integrate (e^(-x))/(x^2)
+AJ
+0
+0
+#
+Question 7.4 (In random order)
+integrate (n+sin(x))/(x+k)^(1/2)
+BH
+0
+0
+#
+Question 7.5 (In random order)
+integrate x/(x^(6)+k)^(1/2)
+AJ
+0
+0
+#
+Question 8
+f(args[0])=args[1] abs(f(x))<x^(args[2])+args[3]  integrate f(x)*e^(-x/3) from args[0] to infinity = args[4]
+(u+r*(3*e^(-q/3)))/3
+5
+q 2
+r -9
+s 4
+t 5
+u 7
+0
