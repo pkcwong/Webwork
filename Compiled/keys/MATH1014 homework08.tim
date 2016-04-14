@@ -1,0 +1,105 @@
+#
+Question 1.1
+cos(n)^2+sin(n)^2
+F
+0
+0
+#
+Question 1.2
+(-1)^(-n)*2*n/ln(n)
+D
+0
+0
+#
+Question 1.3
+(-5)^n/n!
+Z
+0
+0
+#
+Question 1.4
+(5*n^(2*n))^(1/n)
+I
+0
+0
+#
+Question 1.5
+(100*n^2+1)/(3*n!)
+Z
+0
+0
+#
+Question 1.6
+(n^2+4*n)^(1/2)-(n^2)^(n^2)
+F
+0
+0
+#
+Question 1.7
+(e/10)^n
+Z
+0
+0
+#
+Question 1.8
+5^(n)/(n!)
+Z
+0
+0
+#
+Question 2
+a(n)=(e^(2*n)+6*n)^(1/n)
+e^2
+0
+0
+#
+Question 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Note for Question 2
+Taking the natural log of both sides, then solving for y in terms of x, gives you the same thing if you just use the identity a = e^(ln(a)) on the right-hand side: 
+ln(y) = ln[ (e^(2x)+6x)^(1/x) ] 
+ln(y) = (1/x) ln[ e^(2x) + 6x ] 
+y = e^[ ln[ e^(2x) + 6x ] / x ] 
+
+For now, just focus on ln[ e^(2x) + 6x ] / x. If you take the limit of this as x goes to infinity, you get inf/inf. So apply l'Hopital's rule. The derivative of the bottom is just 1. The derivative of the top is 
+(1 / [e^(2x) + 6x] ) * (2e^(2x) + 6) = 
+(2e^(2x) + 6) / [e^(2x) + 6x] 
+
+Taking the limit of this gives you inf/inf again. So apply l'Hopital's rule again: 
+(4e^(2x) + 0) / [2e^(2x) + 6x] 
+4e^(2x) / [2e^(2x) + 6x] 
+
+This gives you inf/inf again, so apply l'Hopital's: 
+8e^(2x) / [4e^(2x) + 6] 
+
+This gives you inf/inf again, so apply l'Hopital's one last time: 
+16e^(2x) / 8e^(2x) 
+16 / 8 
+2 
+
+So if the limit of ln[ e^(2x) + 6x ] / x goes to 2 as x goes to infinity, then the original problem goes to: 
+y = e^[ 2 ] 
+
+So the limit is e^2.
