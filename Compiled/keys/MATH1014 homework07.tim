@@ -94,20 +94,20 @@ diverge
 0
 0
 #
-Question 6.1
+Question 6.a1
 ingrate 1/(e^(args[0])+n) from 1 to infinity
 1/e^(f*x)
 1
 f 3
 0
 #
-Question 6.2
+Question 6.a2
 so we predict the integral
 converges
 0
 0
 #
-Question 6.3
+Question 6.b1
 ingrate e^(args[0])/(e^(args[1])+n) from 1 to infinity
 1/e^((g-f)*x)
 2
@@ -115,27 +115,27 @@ f 3
 g 4
 0
 #
-Question 6.4
+Question 6.b2
 so we predict the integral
 converges
 0
 0
 #
-Question 6.5
+Question 6.c1
 ingrate x^(args[0])/(x^(args[1])+n) from 1 to infinity
-x^(g-f)
+1/x^(g-f)
 2
 f 1
 g 1
 0
 #
-Question 6.6
+Question 6.c2
 so we predict the integral
-diverges
+diverges_if_power_of_x_=_1
 0
 0
 #
-Question 6.7
+Question 6.d1
 ingrate x^(args[0])/(x^(args[1])+x^(args[2])+n) from 1 to infinity
 1/x^(g-f)
 3
@@ -144,9 +144,9 @@ g 4
 h 3
 0
 #
-Question 6.8
+Question 6.d2
 so we predict the integral
-converges
+converges_if_power_of_x_>_1
 0
 0
 #
@@ -181,12 +181,13 @@ AJ
 0
 #
 Question 8
-f(args[0])=args[1] abs(f(x))<x^(args[2])+args[3]  integrate f(x)*e^(-x/3) from args[0] to infinity = args[4]
-(u+r*(3*e^(-q/3)))/3
+f(args[0])=args[1] abs(f(x))<x^(args[2])+args[3]  integrate f(x)*e^(-x/args[4]) from args[0] to infinity = args[5]
+(u-r*(z*e^(-q/z)))/z
 5
 q 2
 r -9
 s 4
 t 5
+z 3
 u 7
 0
