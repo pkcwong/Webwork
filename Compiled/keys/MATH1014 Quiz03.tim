@@ -1,0 +1,74 @@
+#
+Question 1.1.1
+See 'MATH1014 Quiz03.jpg'
+N/A
+0
+0
+#
+Question 1.1.2
+See 'MATH1014 Quiz03.jpg'
+N/A
+0
+0
+#
+Question 1.2.1
+See 'MATH1014 Quiz03.jpg'
+N/A
+0
+0
+#
+Question 1.2.2
+See 'MATH1014 Quiz03.jpg'
+N/A
+0
+0
+#
+Question 1.3
+See 'MATH1014 Quiz03.jpg'
+N/A
+0
+0
+#
+Question 1.4
+See 'MATH1014 Quiz03.jpg'
+N/A
+0
+0
+#
+Question 2.S
+Simpson's Rule approximation S(6) for the integration of f(x) from args[0] to args[1] Value of f(x): args[2] args[3] args[4] args[5] args[6] args[7] args[8]
+(q-r)/3/6*(a+4*b+2*c+4*d+2*e+4*f+g)
+9
+q -10 
+r -16
+a 2
+b 4
+c 1
+d -1
+e 1
+f 4
+g 3
+0
+#
+Question 2.T
+Trapezoid Rule approximation T(6) for the integration of f(x) from args[0] to args[1] Value of f(x): args[2] args[3] args[4] args[5] args[6] args[7] args[8]
+(q-r)/6*(a/2+b+c+d+e+f+g/2)
+9
+q -10 
+r -16
+a 2
+b 4
+c 1
+d -1
+e 1
+f 4
+g 3
+0
+#
+Question 3
+Integrate x*e^(args[0]*x) from args[1] to infinity
+-(1/e^(g*f))*(-g/f-1/f/f)
+2
+f -5
+g 6
+0
