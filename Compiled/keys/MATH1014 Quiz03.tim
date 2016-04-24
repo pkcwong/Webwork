@@ -67,7 +67,7 @@ g 3
 #
 Question 3
 Integrate x*e^(args[0]*x) from args[1] to infinity
--(1/e^(g*f))*(g/f-1/f/f)
+-(e^(g*f))*(g/f-1/f/f)
 2
 f -5
 g 6
