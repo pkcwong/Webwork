@@ -72,3 +72,33 @@ Integrate x*e^(args[0]*x) from args[1] to infinity
 f -5
 g 6
 0
+#
+Question 4.1
+Integrate F/(t+G) from A to B
+converges
+0
+0
+#
+Question 4.2
+Integrate 1/(t+F)^(2) from A to B
+diverges
+0
+0
+#
+Question 4.3
+Integrate 1/(t^(3)+F)^(1/2) from A to infinity
+converges
+0
+0
+#
+Question 4.4
+Integrate 1/(e^(z)+F^(z)) from A to infinity
+converges
+0
+0
+#
+Question 4.5
+Integrate (F+sin(z))/z from A to infinity
+diverges
+0
+0
