@@ -54,13 +54,53 @@ e^2
 0
 #
 Question 3a
-
-
-
-
-
-
-
+Sum of (args[0]^(n))/(args[0]-1)^(n) from args[1] to infinity
+DIV
+0
+0
+#
+Question 3b
+Sum of 1/(args[0]^(n)) from args[1] to infinity
+1/f^g/(1-1/f)
+2
+f 2
+g 2
+0
+#
+Question 3c
+Sum of args[0]^(n)/args[1]^(args[2]*n+args[3]) from args[4] to infinity
+f^(k)/(g^(h*k+j))/(1-(f^(2)/(g^(h*2+j)))/(f^(1)/(g^(h*1+j))))
+5
+f 2
+g 4
+h 2
+j 1
+k 0
+0
+#
+Question 3d
+Sum of args[0]^(n)/(args[0]+1)^(n) from args[1] to infinity
+f^g/(f+1)^g/(1-(f^2/(f+1)^2)/(f^1/(f+1)^1))
+2
+f 8
+g 5
+0
+#
+Question 3e
+Sum of args[0]^n/args[0]^(n+args[1]) from args[2] to infinity
+DIV
+0
+0
+#
+Question 3f
+Sum of (args[0]^n+args[1]^n)/args[2] from args[3] to infinity
+f^k/(j)^k/(1-((f^2/(j)^2)/(f^1/(j)^1))+g^k/(j)^k/(1-((g^2/(j)^2)/(g^1/(j)^1))
+4
+f 8
+g 2
+j 9
+k 1
+0
 
 
 
